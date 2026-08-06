@@ -98,3 +98,10 @@ const deleteEvent = asyncHandler(async (req, res)=> {
     ok(res, null, 'Event Deleted Successfully');
 });
 
+module.exports = {
+    listEvents,
+    getEvent,
+    createEvent,
+    updateEvent,
+    deleteEvent
+};
