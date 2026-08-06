@@ -22,9 +22,9 @@ const userSchema = new mongoose.Schema({
     },
     role:{
         type: String,
-        enum: ['attendee', 'admin', 'organizer'],
+        enum: ['attendee', 'admin'],
         default: 'attendee',
-    }
+    },
 }, {
     timestamps: true,
     toJSON: true,
