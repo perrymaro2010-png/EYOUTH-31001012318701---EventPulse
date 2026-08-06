@@ -37,6 +37,10 @@ const eventSchema = new mongoose.Schema({
     date:{
         type: Date,
         required: [true, 'Date field is required']
+    },
+    registrationCount:{
+        type: Number,
+        default: 0
     }
 }, {timestamps: true});
 
