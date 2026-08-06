@@ -117,9 +117,19 @@ const validateQuery = [
     .isIn(['asc', 'desc']).withMessage('Order must be either asc or desc')
 ];
 
+const validator = (req, res, next)=>{
+    const errors = validationResult(req);
+    if(!errors.isEmpty()){
+        const message = errors.array().map((e)=> e.msg).join(', ');
+        return next(new AppError(message, 400))
+    }
+    next();
+};
+
 module.exports = {
     validateAllBody,
     validatePartialBody,
     validateID,
-    validateQuery
+    validateQuery,
+    validator
 };
