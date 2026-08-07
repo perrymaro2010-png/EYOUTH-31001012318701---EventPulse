@@ -5,11 +5,6 @@ const eventSchema = new mongoose.Schema({
         unique: true,
         required: [true, 'Event name is required']
     },
-    organiser:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
-    },
     description:{
         type: String,
         trim: true,
