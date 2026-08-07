@@ -8,7 +8,7 @@ const validateIDinBody = [
 ];
 
 const validateIDinParam = [
-    param('id')
+    param('eventID')
     .notEmpty().withMessage('Event ID is required')
     .isMongoId().withMessage('Invalid Event ID')
 ];
