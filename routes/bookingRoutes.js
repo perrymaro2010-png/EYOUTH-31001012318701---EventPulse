@@ -15,9 +15,10 @@ const {
     getBooking,
     cancelBooking
 } = require('../controllers/bookingController');
-const { validateID } = require('../middleware/validators/eventValidators');
 
 router.get('/me', protect, listBookings);
 router.get('/:id', protect, validateIDinParam, validator, getBooking);
 router.post('/', protect, validateIDinBody, validator, reserve);
 router.delete('/:id', protect, validateIDinParam, validator, cancelBooking);
+
+module.exports = router;
