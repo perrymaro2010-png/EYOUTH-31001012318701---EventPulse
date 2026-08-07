@@ -14,10 +14,11 @@ const reserve = asyncHandler(async (req, res)=>{
         event: eventID,
         status: 'confirmed'
     });
-    if(existingBooking) throw new AppError('You have already booked for this event', 409);
+    if(existentBooking) throw new AppError('You have already booked for this event', 409);
 
+    let booked;
     if(event.registrationCount < event.capacity){
-        const booked = await Booking.create({user: req.user._id, event, status: 'confirmed'});
+        booked = await Booking.create({user: req.user._id, event, status: 'confirmed'});
         event.registrationCount += 1;
     } else {
         throw new AppError('This event is fully booked', 409);
@@ -35,7 +36,6 @@ const listBookings = asyncHandler(async (req, res)=> {
         user: req.user._id,
         status: 'confirmed'
     }).populate('event');
-    if(!booking.length) throw new AppError('No Bookings Found', 404);
     ok(res, booking, 'Reservations Fetched Successfully');
 });
 
@@ -43,7 +43,7 @@ const listBookings = asyncHandler(async (req, res)=> {
 const getBooking = asyncHandler(async (req, res)=>{
     const booking = await Booking.findOne({
         user: req.user._id,
-        event: req.params.id,
+        event: req.params.eventID,
         status: 'confirmed'
     });
     if(!booking) throw new AppError('Reservation Not Found', 404);
@@ -53,13 +53,16 @@ const getBooking = asyncHandler(async (req, res)=>{
 
 // DELETE - /api/bookings/:id
 const cancelBooking = asyncHandler(async (req, res)=> {
-    const booking = await Booking.findOne({
-        user: req.user._id,
-        event: req.params.id,
-        status: 'confirmed'
-    });
+    const booking = await Booking.findById(req.params.id);
     if(!booking) throw new AppError('Reservation Not Found', 404);
-    booking.status = 'canceled';
+
+    if(booking.user.toString() !== req.user._id.toString())
+        throw new AppError('You are not allowed to cancel this reservation', 403);
+
+    if(booking.status === 'cancelled')
+        throw new AppError('Reservation Already Cancelled', 400);
+    
+    booking.status = 'cancelled';
     await booking.save();
 
     await Event.findByIdAndUpdate(booking.event, {$inc: {registrationCount: -1}});
