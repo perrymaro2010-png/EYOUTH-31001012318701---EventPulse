@@ -39,19 +39,8 @@ const listBookings = asyncHandler(async (req, res)=> {
     ok(res, booking, 'Reservations Fetched Successfully');
 });
 
-// GET - /api/bookings/:id
-const getBooking = asyncHandler(async (req, res)=>{
-    const booking = await Booking.findOne({
-        user: req.user._id,
-        event: req.params.eventID,
-        status: 'confirmed'
-    });
-    if(!booking) throw new AppError('Reservation Not Found', 404);
 
-    ok(res, booking, 'Reservation Fetched Successfully');
-});
-
-// DELETE - /api/bookings/:id
+// DELETE - /api/bookings/:eventID
 const cancelBooking = asyncHandler(async (req, res)=> {
     const booking = await Booking.findById(req.params.id);
     if(!booking) throw new AppError('Reservation Not Found', 404);
@@ -61,7 +50,7 @@ const cancelBooking = asyncHandler(async (req, res)=> {
 
     if(booking.status === 'cancelled')
         throw new AppError('Reservation Already Cancelled', 400);
-    
+
     booking.status = 'cancelled';
     await booking.save();
 
