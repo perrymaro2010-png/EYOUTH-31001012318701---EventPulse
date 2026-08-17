@@ -7,7 +7,7 @@ const {
     validateIDinBody,
     validateIDinParam,
     validator
-} = require('../middleware/validators/bookingValidator');
+} = require('../middleware/validators/bookingValidators');
 
 const {
     reserve,
