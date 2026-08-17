@@ -1,9 +1,11 @@
 const config = require('../config/config');
+const http = require('http');
 const express = require('express');
 const app = express();
 const mongoSanitize = require('express-mongo-sanitize');
 const cors = require('cors');
 const connectDB = require('../db/connect');
+const initSocket = require('./socket');
 
 const authRoutes = require('./routes/authRoutes');
 const eventRoutes = require('./routes/eventRoutes');
@@ -23,6 +25,10 @@ app.use((req, res) => {
 });
 
 app.use(errorHandler);
+
+// create server to combine with socket.io
+const server = http.createServer(app);
+initSocket(server);
 
 const start = async ()=> {
     try {
