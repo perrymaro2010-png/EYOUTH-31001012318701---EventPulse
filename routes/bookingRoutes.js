@@ -7,17 +7,15 @@ const {
     validateIDinBody,
     validateIDinParam,
     validator
-} = require('../middleware/validators/bookingValidators');
+} = require('../middleware/validators/bookingValidator');
 
 const {
     reserve,
     listBookings,
-    getBooking,
     cancelBooking
 } = require('../controllers/bookingController');
 
 router.get('/me', protect, listBookings);
-router.get('/:id', protect, validateIDinParam, validator, getBooking);
 router.post('/', protect, validateIDinBody, validator, reserve);
 router.delete('/:id', protect, validateIDinParam, validator, cancelBooking);
 
