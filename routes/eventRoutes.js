@@ -25,3 +25,5 @@ router.get('/:id', protect, requireRole('admin', 'attendee'), validateID, valida
 router.post('/', protect, requireRole('admin'), validateAllBody, validator, createEvent);
 router.patch('/:id', protect, requireRole('admin'), validateID, validatePartialBody, validator, updateEvent);
 router.delete('/:id', protect, requireRole('admin'), validateID, validator, deleteEvent);
+
+module.exports = router;
