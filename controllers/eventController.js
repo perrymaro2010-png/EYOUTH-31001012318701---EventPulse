@@ -20,7 +20,7 @@ const listEvents = asyncHandler(async (req, res)=> {
     //--Text Search--
     filter.$or = [
       {
-        name: {
+        title: {
           $regex: req.query.search,
           $options: "i",
         },
@@ -77,7 +77,7 @@ const getEvent = asyncHandler(async (req, res)=>{
 });
 // POST - /api/events
 const createEvent = asyncHandler(async (req, res)=> {
-    const newEvent = await Event.create({...req.body, organiser: req.user._id});
+    const newEvent = await Event.create({...req.body, organizer: req.user._id});
     await newEvent.populate('category');
     ok(res, newEvent, 'New Event Created Successfully', 201);
 });
