@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const eventSchema = new mongoose.Schema({
-    name:{
+    title:{
         type: String,
         unique: true,
         required: [true, 'Event name is required']
@@ -18,10 +18,15 @@ const eventSchema = new mongoose.Schema({
         minLength: [3, 'City name must be at least 3 characters'],
 
     },
+    venue: {
+        type: String,
+        trim: true,
+        required: [true, 'Venue name is required']
+    },
     capacity:{
         type: Number,
         required: true,
-        min: 50,
+        min: 1,
         default: 50
     },
     category:{
