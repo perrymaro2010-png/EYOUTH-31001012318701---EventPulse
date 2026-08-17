@@ -2,14 +2,14 @@ const {body, query, param, validationResult} = require('express-validator');
 const AppError = require("../utils/AppError.js");
 
 const validateAllBody = [
-    body('name')
+    body('title')
     .notEmpty().withMessage('The Event Name is required')
     .isString().withMessage('Name must be a string')
     .isLength({min: 5}).withMessage('Name must be at least 5 characters')
     .trim(),
 
-    body('organiser')
-    .notEmpty().withMessage('The Event Organiser is required')
+    body('organizer')
+    .notEmpty().withMessage('The Event Organizer is required')
     .isMongoId().withMessage('Invalid ID'),
 
     body('description')
@@ -22,6 +22,12 @@ const validateAllBody = [
     .notEmpty().withMessage('City is required')
     .isString().withMessage('City must be a string')
     .isLength({min: 2}).withMessage('City must be at least 2 characters')
+    .trim(),
+
+    body('venue')
+    .notEmpty().withMessage('Venue is required')
+    .isString().withMessage('Venue must be a string')
+    .isLength({min: 3}).withMessage('Venue name must be at least 3 characters long')
     .trim(),
 
     body('capacity')
@@ -39,13 +45,13 @@ const validateAllBody = [
 ];
 
 const validatePartialBody = [
-    body('name')
+    body('title')
     .optional()
     .isString().withMessage('Name must be a string')
     .isLength({min: 5}).withMessage('Name must be at least 5 characters')
     .trim(),
 
-    body('organiser')
+    body('organizer')
     .optional()
     .isMongoId().withMessage('Invalid ID'),
 
@@ -59,6 +65,12 @@ const validatePartialBody = [
     .optional()
     .isString().withMessage('City must be a string')
     .isLength({min: 2}).withMessage('City must be at least 2 characters')
+    .trim(),
+
+    body('venue')
+    .optional()
+    .isString().withMessage('Venue must be a string')
+    .isLength({min: 3}).withMessage('Venue name must be at least 3 characters long')
     .trim(),
 
     body('capacity')
