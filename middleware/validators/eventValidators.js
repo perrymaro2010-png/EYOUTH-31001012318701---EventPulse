@@ -103,11 +103,11 @@ const validateQuery = [
     .isLength({min: 2}).withMessage('City must be at least 2 characters')
     .trim(),
 
-    query('dateTo')
+    query('endDate')
     .optional()
     .isDate().withMessage('Must be a date'),
     
-    query('dateFrom')
+    query('startDate')
     .optional()
     .isDate().withMessage('Must be a date'),
     
@@ -121,7 +121,7 @@ const validateQuery = [
 
     query('sortBy')
     .optional()
-    .isIn(['date', 'popular']).withMessage('sortBy must be a string')
+    .isIn(['date', 'registrations']).withMessage('sortBy must be a string')
 ,
 
     query('order')
