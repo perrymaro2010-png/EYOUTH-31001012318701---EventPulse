@@ -46,7 +46,7 @@ const listEvents = asyncHandler(async (req, res)=> {
 
 
     //--Sorting--
-    const sortBy = req.query.sortBy === 'date' ? 'date' : 'busiest';
+    const sortBy = req.query.sortBy === 'popular' ? 'registrationCount' : 'date';
     const order = req.query.order === 'desc' ? -1 : 1;
     const sort = {[sortBy]: order}
     
