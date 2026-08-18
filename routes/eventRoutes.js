@@ -23,8 +23,8 @@ const {
 const { listMessages } = require('../controllers/messageController');
 
 // event handling
-router.get('/', protect, validateQuery, validator, listEvents);
-router.get('/:id', protect, validateID, validator, getEvent);
+router.get('/', validateQuery, validator, listEvents);
+router.get('/:id', validateID, validator, getEvent);
 router.post('/', protect, requireRole('admin'), validateAllBody, validator, createEvent);
 router.patch('/:id', protect, requireRole('admin'), validateID, validatePartialBody, validator, updateEvent);
 router.delete('/:id', protect, requireRole('admin'), validateID, validator, deleteEvent);
