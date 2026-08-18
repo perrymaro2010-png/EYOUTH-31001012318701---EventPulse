@@ -9,7 +9,7 @@ const initSocket = require('./socket');
 
 const authRoutes = require('./routes/authRoutes');
 const eventRoutes = require('./routes/eventRoutes');
-const bookingRoutes = require('./routes/bookingRoutes');
+const registrationRoutes = require('./routes/registrationRoutes');
 const errorHandler = require('./middleware/errorHandler');
 
 app.use(cors());
@@ -18,7 +18,7 @@ app.use(mongoSanitize());
 
 app.use('/api/auth', authRoutes);
 app.use('/api/events', eventRoutes);
-app.use('/api/bookings', bookingRoutes);
+app.use('/api/registrations', registrationRoutes);
 
 app.use((req, res) => {
   res.status(404).json({ status: 'error', message: 'Route not found' });
@@ -33,7 +33,7 @@ initSocket(server);
 const start = async ()=> {
     try {
         await connectDB();
-        app.listen(config.port, () => {
+        server.listen(config.port, () => {
             console.log(`Server running on port ${config.port}`);
         });
     } catch (err) {
