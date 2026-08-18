@@ -10,13 +10,9 @@ const messageSchema = new mongoose.Schema({
         ref: 'Event',
         required: [true, 'Event field is required']
     },
-    message:{
+    text:{
         type: String,
         required: [true, 'Message field is required'],
-    },
-    sentAt:{
-        type: Date,
-        default: Date.now
     }
 }, {timestamps: true});
 
