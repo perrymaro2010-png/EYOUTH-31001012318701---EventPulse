@@ -50,15 +50,14 @@ const initSocket = (httpServer) => {
                 const saved = await Message.create({
                     sender: socket.user._id,
                     event: eventID,
-                    message
+                    text
                 });
 
                 io.to(`event: ${eventID}`).emit('announcement', {
                     _id: saved._id,
                     sender: saved.sender,
                     event: saved.event,
-                    message: saved.message,
-                    sentAt: saved.sentAt
+                    message: saved.text,
                 });
             } catch (err) {
                 socket.emit('errorMessage', 'Failed to broadcast message');
@@ -69,9 +68,8 @@ const initSocket = (httpServer) => {
         socket.on('disconnect', () => {
             console.log(`Socket disconnected: ${socket.id} (user: ${socket.user._id})`);
         });
-
-        return io;
     });
+    return io;
 };
 
 
