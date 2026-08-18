@@ -17,7 +17,7 @@ const reserve = asyncHandler(async (req, res)=>{
 
     let booked;
     if(event.registrationCount < event.capacity){
-        booked = await Registration.create({user: req.user._id, event});
+        booked = await Registration.create({attendee: req.user._id, event});
         event.registrationCount += 1;
     } else {
         throw new AppError('This event is fully booked', 409);
@@ -32,7 +32,7 @@ const reserve = asyncHandler(async (req, res)=>{
 // GET - /api/registration/me
 const getRegistration = asyncHandler(async (req, res)=> {
     const registration = await Registration.find({
-        user: req.user._id,
+        attendee: req.user._id,
     }).populate('event');
     ok(res, registration, 'Reservations Fetched Successfully');
 });
@@ -43,10 +43,10 @@ const cancelRegistration = asyncHandler(async (req, res)=> {
     const registration = await Registration.findById(req.params.id);
     if(!registration) throw new AppError('Reservation Not Found', 404);
 
-    if(registration.user.toString() !== req.user._id.toString())
+    if(registration.attendee.toString() !== req.user._id.toString())
         throw new AppError('You are not allowed to cancel this reservation', 403);
 
-    await registration.save();
+    await registration.deleteOne();
 
     await Event.findByIdAndUpdate(registration.event, {$inc: {registrationCount: -1}});
     ok(res, null, 'Reservation Deleted Successfully');
