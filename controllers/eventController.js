@@ -1,20 +1,20 @@
-const {asyncHandler, ok} = require('../utils/asyncHandler');
+const {asyncHandler, ok, okList} = require('../utils/asyncHandler');
 const AppError = require('../utils/AppError');
 const Event = require('../models/eventModel');
 
 // GET - /api/events
 const listEvents = asyncHandler(async (req, res)=> {
-    const {category, city, dateFrom, dateTo, search} = req.query;
+    const {category, city, startDate, endDate, search} = req.query;
     let filter = {};
 
     if(category) filter.category = category;
     if(city) filter.city = city;
-    if(dateFrom || dateTo){
+    if(startDate || endDate){
         filter.date = {};
-        if(dateFrom) 
-            filter.date.$gte = new Date(dateFrom);
-        if(dateTo) 
-            filter.date.$lte = new Date(dateTo);
+        if(startDate) 
+            filter.date.$gte = new Date(startDate);
+        if(endDate) 
+            filter.date.$lte = new Date(endDate);
     };
     if (search) {
     //--Text Search--
@@ -46,7 +46,7 @@ const listEvents = asyncHandler(async (req, res)=> {
 
 
     //--Sorting--
-    const sortBy = req.query.sortBy === 'popular' ? 'registrationCount' : 'date';
+    const sortBy = req.query.sortBy === 'registrations' ? 'registrationCount' : 'date';
     const order = req.query.order === 'desc' ? -1 : 1;
     const sort = {[sortBy]: order}
     
@@ -56,21 +56,13 @@ const listEvents = asyncHandler(async (req, res)=> {
         Event.countDocuments(filter)
     ]);
 
-    ok(res, {
-        events,
-        pagination:{
-            page: pageNum,
-            limit: limitNum,
-            totalResults: total,
-            totalPages: Math.ceil(total / limitNum)
-        }
-    }, 'Events Fetched Successfully');
+    okList(res, { data: events, total, page: pageNum, limit: limitNum, totalPages: Math.ceil(total / limitNum) });
 });
 
 // GET /api/events/:id
 const getEvent = asyncHandler(async (req, res)=>{
     const {id} = req.params;
-    const event = await Event.findById(id).populate('category');
+    const event = await Event.findById(id).populate('category').populate('organizer');
     if (!event) 
         throw new AppError('Event Not Found', 404);
     ok(res, event, 'Event Fetched Successfully');
