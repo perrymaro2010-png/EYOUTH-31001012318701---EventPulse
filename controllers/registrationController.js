@@ -13,23 +13,23 @@ const reserve = asyncHandler(async (req, res)=>{
         attendee: req.user._id,
         event: eventID,
     });
-    if(existentBooking) throw new AppError('You have already booked for this event', 409);
+    if(existentBooking) throw new AppError('You have already booked for this event', 400);
 
-    let booked;
-    if(event.registrationCount < event.capacity){
-        booked = await Registration.create({attendee: req.user._id, event});
-        event.registrationCount += 1;
-    } else {
-        throw new AppError('This event is fully booked', 409);
+    const currentCount = await Registration.countDocuments({event: eventID});
+    if(currentCount >= event.capacity){
+        throw new AppError('This event is full', 400);
     };
 
-    await event.save();
-    await booked.populate('event');
+    const registration = await Registration.create({event: eventID, attendee: req.user._id});
+    event.registrationCount += 1;
 
-    ok(res, booked, 'Event reserved successfully', 201);
+    await event.save();
+    await registration.populate('event');
+
+    ok(res, registration, 'Event reserved successfully', 201);
 });
 
-// GET - /api/registration/me
+// GET - /api/registration/my
 const getRegistration = asyncHandler(async (req, res)=> {
     const registration = await Registration.find({
         attendee: req.user._id,
