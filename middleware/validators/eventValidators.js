@@ -32,8 +32,7 @@ const validateAllBody = [
 
     body('capacity')
     .notEmpty().withMessage('Capacity is required')
-    .isInt().withMessage('Capacity must be a number')
-    .isLength({min: 50}).withMessage('Capacity k'),
+    .isInt().withMessage('Capacity must be a number'),
 
     body('category')
     .notEmpty().withMessage('Category is required')
@@ -75,7 +74,7 @@ const validatePartialBody = [
 
     body('capacity')
     .optional()
-    .isInt({min: 50}).withMessage('Capacity must be a number'),
+    .isInt({min: 1}).withMessage('Capacity must be a number'),
 
     body('category')
     .optional()
@@ -113,7 +112,7 @@ const validateQuery = [
     
     query('page')
     .optional()
-    .isInt({min: 1}).withMessage('Page must be a number between 1 and 10'),
+    .isInt({min: 1, max: 10}).withMessage('Page must be a number between 1 and 10'),
 
     query('limit')
     .optional()

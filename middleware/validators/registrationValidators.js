@@ -2,7 +2,7 @@ const {body, query, param, validationResult} = require('express-validator');
 const AppError = require("../utils/AppError.js");
 
 const validateIDinBody = [
-    body('eventID')
+    body('event')
     .notEmpty().withMessage('Event ID is required')
     .isMongoId().withMessage('Invalid Event ID'),
 ];
