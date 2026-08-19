@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const {
-    protect,
+    requireAuth,
 } = require('../middleware/requireAuth');
 const {
     validateIDinBody,
@@ -15,8 +15,8 @@ const {
     cancelRegistration
 } = require('../controllers/registrationController');
 
-router.get('/me', protect, getRegistration);
-router.post('/', protect, validateIDinBody, validator, reserve);
-router.delete('/:id', protect, validateIDinParam, validator, cancelRegistration);
+router.get('/my', requireAuth, getRegistration);
+router.post('/', requireAuth, validateIDinBody, validator, reserve);
+router.delete('/:id', requireAuth, validateIDinParam, validator, cancelRegistration);
 
 module.exports = router;
