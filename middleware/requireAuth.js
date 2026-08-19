@@ -1,9 +1,10 @@
 const jwt = require('jsonwebtoken');
+const {asyncHandler} = require('../utils/asyncHandler');
 const AppError = require('../utils/AppError');
 const User = require('../models/userModel');
 const config = require('../config/config');
 
-const protect = asyncHandler(async (req, res, next)=> {
+const requireAuth = asyncHandler(async (req, res, next)=> {
     const authHeader = req.headers.authorization;
     if (!authHeader || !authHeader.startsWith('Bearer '))
         throw new AppError('No token provided', 401);
@@ -25,4 +26,4 @@ const requireRole = (...roles)=>{
         next();
     } 
 };
-module.exports = {protect, authorize};
+module.exports = {requireAuth, requireRole};
