@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const {
-    protect,
+    requireAuth,
     requireRole
 } = require('../middleware/requireAuth');
 const {
@@ -25,12 +25,12 @@ const { listMessages } = require('../controllers/messageController');
 // event handling
 router.get('/', validateQuery, validator, listEvents);
 router.get('/:id', validateID, validator, getEvent);
-router.post('/', protect, requireRole('admin'), validateAllBody, validator, createEvent);
-router.patch('/:id', protect, requireRole('admin'), validateID, validatePartialBody, validator, updateEvent);
-router.delete('/:id', protect, requireRole('admin'), validateID, validator, deleteEvent);
+router.post('/', requireAuth, requireRole('admin'), validateAllBody, validator, createEvent);
+router.patch('/:id', requireAuth, requireRole('admin'), validateID, validatePartialBody, validator, updateEvent);
+router.delete('/:id', requireAuth, requireRole('admin'), validateID, validator, deleteEvent);
 
 
 // message handling
-router.get('/:id/messages', protect, validateID, validator, listMessages);
+router.get('/:id/messages', requireAuth, validateID, validator, listMessages);
 
 module.exports = router;
