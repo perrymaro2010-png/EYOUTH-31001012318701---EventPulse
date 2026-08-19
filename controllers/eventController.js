@@ -56,7 +56,7 @@ const listEvents = asyncHandler(async (req, res)=> {
         Event.countDocuments(filter)
     ]);
 
-    okList(res, { data: events, total, page: pageNum, limit: limitNum, totalPages: Math.ceil(total / limitNum) });
+    okList(res, { data: events, page: pageNum, limit: limitNum, total, totalPages: Math.ceil(total / limitNum) });
 });
 
 // GET /api/events/:id
