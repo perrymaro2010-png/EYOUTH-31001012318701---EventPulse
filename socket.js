@@ -35,8 +35,8 @@ const initSocket = (httpServer) => {
         console.log(`User ${socket.id} is now connected!`);
 
         // attendee joins a room
-        socket.on('joinEvent', (eventID) => {
-            socket.join(`event: ${eventID}`);
+        socket.on('join-event', (eventID) => {
+            socket.join(eventID);
             console.log(`Socket ${socket.id} joined event: ${eventID}`);
         });
 
