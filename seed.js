@@ -111,7 +111,7 @@ const seed = async () => {
                 venue: 'The Great Hall',
                 capacity: 120,
                 category: music._id,
-                organiser: admin._id,
+                organizer: admin._id,
                 date: new Date('2026-09-15'),
                 registrationCount: 20
             },
@@ -122,7 +122,7 @@ const seed = async () => {
                 venue: 'The Fanzone',
                 capacity: 400,
                 category: sports._id,
-                organiser: admin._id,
+                organizer: admin._id,
                 date: new Date('2026-09-30'),
                 registrationCount: 130
             },
@@ -133,7 +133,7 @@ const seed = async () => {
                 venue: 'Non Al-Sahar Library',
                 capacity: 320,
                 category: chess._id,
-                organiser: admin._id,
+                organizer: admin._id,
                 date: new Date('2026-11-10'),
                 registrationCount: 13
             },
@@ -144,7 +144,7 @@ const seed = async () => {
                 venue: 'Grand Hall',
                 capacity: 210,
                 category: tech._id,
-                organiser: admin._id,
+                organizer: admin._id,
                 date: new Date('2026-10-20'),
                 registrationCount: 200
             }
