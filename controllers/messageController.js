@@ -14,7 +14,7 @@ const listMessages = asyncHandler(async (req, res)=> {
 
 // POST - /api/announcements
 const announce = asyncHandler(async(req, res)=> {
-    const { event: eventID, text } = req.body;
+    const { event, text } = req.body;
     const io = req.app.get('io');
     const message = await Message.create({
         sender: req.user._id,
@@ -22,12 +22,12 @@ const announce = asyncHandler(async(req, res)=> {
         text,
     });
     await message.populate('sender', 'name role').populate('event', 'title');
-    const messages = await Message.find({event});
     
     io.to(event).emit("announcement", message);
 })
 
 
 module.exports = {
-    listMessages
+    listMessages,
+    announce
 };
