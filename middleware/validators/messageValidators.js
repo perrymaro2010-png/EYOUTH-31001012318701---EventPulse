@@ -1,5 +1,5 @@
 const { body, param, validationResult } = require('express-validator');
-const AppError = require('../utils/AppError');
+const AppError = require('../../utils/AppError');
 
 const validateAnnouncement = [
     body('event')
