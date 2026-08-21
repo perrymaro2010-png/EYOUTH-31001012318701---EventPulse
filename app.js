@@ -6,11 +6,11 @@ const mongoSanitize = require('express-mongo-sanitize');
 const morgan = require('morgan');
 const cors = require('cors');
 const connectDB = require('./db/connect');
-const initSocket = require('./socket');
 
 const authRoutes = require('./routes/authRoutes');
 const eventRoutes = require('./routes/eventRoutes');
 const registrationRoutes = require('./routes/registrationRoutes');
+const messageRoutes = require('./routes/messageRoutes');
 const errorHandler = require('./middleware/errorHandler');
 
 app.use(morgan('dev'));
@@ -21,6 +21,7 @@ app.use(mongoSanitize());
 app.use('/api/auth', authRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/api/registrations', registrationRoutes);
+app.use('/api/announcements', messageRoutes);
 
 app.use((req, res) => {
   res.status(404).json({ status: 'error', message: 'Route not found' });
@@ -29,8 +30,10 @@ app.use((req, res) => {
 app.use(errorHandler);
 
 // create server to combine with socket.io
+const initSocket = require('./socket');
 const server = http.createServer(app);
-initSocket(server);
+const io = initSocket(server);
+app.set('io', io);
 
 const start = async ()=> {
     try {
