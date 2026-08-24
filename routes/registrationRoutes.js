@@ -4,10 +4,10 @@ const {
     requireAuth,
 } = require('../middleware/requireAuth');
 const {
+    validateReservationID,
     validateIDinBody,
-    validateIDinParam,
     validator
-} = require('../middleware/validators/registrationValidators');
+} = require('../middleware/validate');
 
 const {
     reserve,
@@ -17,6 +17,6 @@ const {
 
 router.get('/my', requireAuth, getRegistration);
 router.post('/', requireAuth, validateIDinBody, validator, reserve);
-router.delete('/:id', requireAuth, validateIDinParam, validator, cancelRegistration);
+router.delete('/:id', requireAuth, validateReservationID, validator, cancelRegistration);
 
 module.exports = router;

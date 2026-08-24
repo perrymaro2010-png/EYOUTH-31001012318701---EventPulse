@@ -7,10 +7,10 @@ const {
 const {
     validateAllBody,
     validatePartialBody,
-    validateID,
     validateQuery,
+    validateEventID,
     validator
-} = require('../middleware/validators/eventValidators');
+} = require('../middleware/validate');
 
 const {
     listEvents,
@@ -22,9 +22,9 @@ const {
 
 // event handling
 router.get('/', validateQuery, validator, listEvents);
-router.get('/:id', validateID, validator, getEvent);
+router.get('/:eventID', validateEventID, validator, getEvent);
 router.post('/', requireAuth, requireRole('admin'), validateAllBody, validator, createEvent);
-router.patch('/:id', requireAuth, requireRole('admin'), validateID, validatePartialBody, validator, updateEvent);
-router.delete('/:id', requireAuth, requireRole('admin'), validateID, validator, deleteEvent);
+router.patch('/:eventID', requireAuth, requireRole('admin'), validateEventID, validatePartialBody, validator, updateEvent);
+router.delete('/:eventID', requireAuth, requireRole('admin'), validateEventID, validator, deleteEvent);
 
 module.exports = router;

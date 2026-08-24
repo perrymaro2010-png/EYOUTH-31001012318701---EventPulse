@@ -4,7 +4,7 @@ const {
     validateRegistration,
     validateLogin,
     validator
-} = require('../middleware/validators/authValidators');
+} = require('../middleware/validate');
 const {
     register,
     login

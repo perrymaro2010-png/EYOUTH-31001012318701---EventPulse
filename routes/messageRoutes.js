@@ -8,7 +8,7 @@ const {
     validateAnnouncement,
     validateEventID,
     validator
-} = require('../middleware/validators/messageValidators');
+} = require('../middleware/validate');
 
 const { 
     listMessages,
@@ -16,7 +16,7 @@ const {
 } = require('../controllers/messageController');
 
 // message handling
-router.get('/:eventID', requireAuth, validateEventID, validator, listMessages);
+router.get('/:eventID', validateEventID, validator, listMessages);
 router.post('/', requireAuth, requireRole('admin'), validateAnnouncement, validator, announce);
 
 module.exports = router;
