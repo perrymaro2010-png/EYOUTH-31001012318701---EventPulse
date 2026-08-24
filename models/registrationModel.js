@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+require('./userModel');
+require('./eventModel')
 const registrationSchema = new mongoose.Schema({
     attendee:{
         type: mongoose.Schema.Types.ObjectId,
