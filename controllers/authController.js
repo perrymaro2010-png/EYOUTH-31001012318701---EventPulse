@@ -33,7 +33,8 @@ const login = asyncHandler(async (req, res)=>{
     const token = generateToken(existingUser._id, existingUser.role);
     existingUser.password = undefined;
     ok(res, {user: existingUser, token}, 'Login Successful', 200);
-})
+});
+
 module.exports = {
     register,
     login

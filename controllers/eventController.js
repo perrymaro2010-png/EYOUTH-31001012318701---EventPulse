@@ -59,33 +59,33 @@ const listEvents = asyncHandler(async (req, res)=> {
     okList(res, { data: events, page: pageNum, limit: limitNum, total, totalPages: Math.ceil(total / limitNum) });
 });
 
-// GET /api/events/:id
+// GET /api/events/:eventID
 const getEvent = asyncHandler(async (req, res)=>{
-    const {id} = req.params;
-    const event = await Event.findById(id).populate('category').populate('organizer');
+    const eventID = req.params.eventID;
+    const event = await Event.findById(eventID).populate('category');
     if (!event) 
         throw new AppError('Event Not Found', 404);
     ok(res, event, 'Event Fetched Successfully');
 });
 // POST - /api/events
 const createEvent = asyncHandler(async (req, res)=> {
-    const newEvent = await Event.create({...req.body, organizer: req.user._id});
+    const newEvent = await Event.create({...req.body});
     await newEvent.populate('category');
     ok(res, newEvent, 'New Event Created Successfully', 201);
 });
 
-// PATCH - /api/events/:id
+// PATCH - /api/events/:eventID
 const updateEvent = asyncHandler(async (req, res)=>{
-    const {id} = req.params;
-    const event = await Event.findByIdAndUpdate(id, req.body, {new: true, runValidators: true}).populate('category');
+    const {eventID} = req.params;
+    const event = await Event.findByIdAndUpdate(eventID, req.body, {new: true, runValidators: true}).populate('category');
     if (!event) throw new AppError('Event Not Found', 404);
     ok(res, event, 'Events Updated Successfully');
 });
 
-// DELETE /api/events/:id
+// DELETE /api/events/:eventID
 const deleteEvent = asyncHandler(async (req, res)=> {
-    const {id} = req.params;
-    const deletedEvent = await Event.findByIdAndDelete(id);
+    const {eventID} = req.params;
+    const deletedEvent = await Event.findByIdAndDelete(eventID);
     if(!deletedEvent) throw new AppError('Event Not Found', 404);
     ok(res, null, 'Event Deleted Successfully');
 });
