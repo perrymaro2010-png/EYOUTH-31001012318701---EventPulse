@@ -37,7 +37,7 @@ const initSocket = (httpServer) => {
         // attendee joins a room
         socket.on('join-event', (eventID) => {
             socket.join(eventID);
-            console.log(`Socket ${socket.id} joined event: ${eventID}`);
+            console.log(`[JOIN] Socket ${socket.id} joined room: "${eventID}"`);
         });
 
         // admin can broadcast a message
