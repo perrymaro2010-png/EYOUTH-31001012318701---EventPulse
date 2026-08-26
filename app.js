@@ -6,7 +6,10 @@ const mongoSanitize = require('express-mongo-sanitize');
 const morgan = require('morgan');
 const cors = require('cors');
 const connectDB = require('./db/connect');
+const mongoose = require('mongoose');
 
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpec = require('./config/swagger');
 const authRoutes = require('./routes/authRoutes');
 const eventRoutes = require('./routes/eventRoutes');
 const registrationRoutes = require('./routes/registrationRoutes');
@@ -27,7 +30,22 @@ app.use((req, res) => {
   res.status(404).json({ status: 'error', message: 'Route not found' });
 });
 
+app.get('/health', (req, res)=>{
+    const dbState = mongoose.connection.readyState;
+    const dbStatus = dbState === 1? 'connected': 'disconnected';
+
+    res.status(200).json({
+        status: 'success',
+        environment: config.isDev ? 'development' : 'production',
+        uptime: process.uptime(),
+        database: dbStatus
+    });
+});
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
 app.use(errorHandler);
+
 
 // create server to combine with socket.io
 const initSocket = require('./socket');
