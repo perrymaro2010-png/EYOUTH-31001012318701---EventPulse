@@ -28,7 +28,7 @@ const login = asyncHandler(async (req, res)=>{
     if(!existingUser)
         throw new AppError('Invalid credentials', 401);
     const isMatch = await existingUser.comparePassword(password);
-    if(!existingUser)
+    if(!isMatch)
         throw new AppError('Invalid credentials', 401);
     const token = generateToken(existingUser._id, existingUser.role);
     existingUser.password = undefined;
