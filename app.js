@@ -5,7 +5,6 @@ const app = express();
 const mongoSanitize = require('express-mongo-sanitize');
 const morgan = require('morgan');
 const cors = require('cors');
-const connectDB = require('./db/connect');
 const mongoose = require('mongoose');
 
 const connectDB = require('./db/connect');
