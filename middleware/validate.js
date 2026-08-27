@@ -42,10 +42,6 @@ const validateAllBody = [
         .isLength({ min: 5 }).withMessage('Name must be at least 5 characters')
         .trim(),
 
-    body('organizer')
-        .notEmpty().withMessage('The Event Organizer is required')
-        .isMongoId().withMessage('Invalid ID'),
-
     body('description')
         .notEmpty().withMessage('Description is required')
         .isString().withMessage('Description must be a string')
@@ -66,7 +62,7 @@ const validateAllBody = [
 
     body('capacity')
         .notEmpty().withMessage('Capacity is required')
-        .isInt({min: 1}).withMessage('Capacity must be a number'),
+        .isInt({min: 1}).withMessage('Capacity must be a positive number'),
 
     body('category')
         .notEmpty().withMessage('Category is required')
@@ -74,7 +70,8 @@ const validateAllBody = [
 
     body('date')
         .notEmpty().withMessage('Date is required')
-        .isDate().withMessage('Must be a date')
+        .isString().withMessage('Must be a date')
+        .toDate()
 ];
 
 const validatePartialBody = [
@@ -83,10 +80,6 @@ const validatePartialBody = [
         .isString().withMessage('Name must be a string')
         .isLength({ min: 5 }).withMessage('Name must be at least 5 characters')
         .trim(),
-
-    body('organizer')
-        .optional()
-        .isMongoId().withMessage('Invalid ID'),
 
     body('description')
         .optional()
@@ -108,7 +101,7 @@ const validatePartialBody = [
 
     body('capacity')
         .optional()
-        .isInt({ min: 1 }).withMessage('Capacity must be a number'),
+        .isInt({ min: 1 }).withMessage('Capacity must be a positive number'),
 
     body('category')
         .optional()
@@ -148,7 +141,7 @@ const validateQuery = [
 
     query('sortBy')
         .optional()
-        .isIn(['date', 'registrations']).withMessage('sortBy must be a string')
+        .isIn(['date', 'registrations']).withMessage('sortBy must be a string, either date or registrations')
     ,
 
     query('order')
