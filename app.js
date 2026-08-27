@@ -69,4 +69,6 @@ const start = async ()=> {
 
 module.exports = app;
 
-start();
+if (require.main === module){
+    start();
+}
