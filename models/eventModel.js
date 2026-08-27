@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+require('./categoryModel');
 const eventSchema = new mongoose.Schema({
     title:{
         type: String,
