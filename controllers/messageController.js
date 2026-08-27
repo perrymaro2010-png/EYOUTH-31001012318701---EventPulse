@@ -6,7 +6,7 @@ const Message = require('../models/messageModel');
 
 const listMessages = asyncHandler(async (req, res) => {
     const {eventID} = req.params;
-    const messages = await Message.find({ event: id }).populate('sender', 'name email role').sort({ createdAt: 1 });
+    const messages = await Message.find({ event: eventID }).populate('sender', 'name email role').sort({ createdAt: 1 });
 
     ok(res, messages, 'Messages Fetched Successfully');
 });
