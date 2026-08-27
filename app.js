@@ -61,6 +61,7 @@ connectDB();
 
 const start = async ()=> {
     try {
+        await connectDB();
         server.listen(config.port, () => {
             console.log(`Server running on port ${config.port}`);
         });
@@ -70,7 +71,4 @@ const start = async ()=> {
 };
 
 module.exports = app;
-
-if (require.main === module){
-    start();
-}
+start();
