@@ -2707,6 +2707,70 @@
                   ],
                   "cookie": [],
                   "body": "{\n    \"status\": \"fail\",\n    \"statusCode\": 400,\n    \"message\": \"You have already booked for this event\",\n    \"data\": null,\n    \"stack\": \"Error: You have already booked for this event\\n    at C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\controllers\\\\registrationController.js:16:31\\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\"\n}"
+                },
+                {
+                  "name": "Reserve (sold out)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"eventID\":\"6a86c68825c5f28b6c6b3f0f\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/registrations",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "registrations"
+                      ]
+                    }
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "324"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"144-OzPQQUk1opAD4f8/GLOtq/M2cA8\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Thu, 27 Aug 2026 14:08:22 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"fail\",\n    \"statusCode\": 400,\n    \"message\": \"This event is full\",\n    \"data\": null,\n    \"stack\": \"Error: This event is full\\n    at C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\EYOUTH-31001012318701 - EventPulse\\\\controllers\\\\registrationController.js:20:15\\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\"\n}"
                 }
               ]
             },
@@ -2959,6 +3023,62 @@
                   ],
                   "cookie": [],
                   "body": "{\n    \"status\": \"success\",\n    \"message\": \"Reservation Deleted Successfully\",\n    \"data\": null\n}"
+                },
+                {
+                  "name": "Delete Reservation (unmatched token)",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{base-url}}api/registrations/6a90541cb6644cb89c0d9b8c",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "registrations",
+                        "6a90541cb6644cb89c0d9b8c"
+                      ]
+                    }
+                  },
+                  "status": "Forbidden",
+                  "code": 403,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "380"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"17c-QmFebG9Lwtu+v/y8Dtp8c5wxYzU\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Thu, 27 Aug 2026 15:32:41 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"fail\",\n    \"statusCode\": 403,\n    \"message\": \"You are not allowed to cancel this reservation\",\n    \"data\": null,\n    \"stack\": \"Error: You are not allowed to cancel this reservation\\n    at C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\EYOUTH-31001012318701 - EventPulse\\\\controllers\\\\registrationController.js:47:15\\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\"\n}"
                 }
               ]
             }
