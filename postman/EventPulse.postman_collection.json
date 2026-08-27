@@ -1,0 +1,2970 @@
+{
+  "info": {
+    "_postman_id": "b0e43a35-67b6-44b2-8a20-f39ceb9ea449",
+    "name": "EventPulse",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55881861",
+    "_collection_link": "https://go.postman.co/collection/55881861-b0e43a35-67b6-44b2-8a20-f39ceb9ea449?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Final Project",
+      "item": [
+        {
+          "name": "Auth (401, 403)",
+          "item": [
+            {
+              "name": "Login Request",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"johndoe1234@gmail.com\",\r\n    \"password\": \"sfjlkWF_255!4\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base-url}}api/auth/login",
+                  "host": [
+                    "{{base-url}}api"
+                  ],
+                  "path": [
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Login Request (attendee)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"email\": \"maddie.smith.sonata@yahoo.com\",\r\n    \"password\": \"545asfgfTRESPASS_\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/auth/login",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "auth",
+                        "login"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "472"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"1d8-GJrazbey5NrN79j+6SAVz05xRtI\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 21 Aug 2026 10:34:36 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"success\",\n    \"message\": \"Login Successful\",\n    \"data\": {\n        \"user\": {\n            \"_id\": \"6a86c68825c5f28b6c6b3f0d\",\n            \"name\": \"Maddie Smith\",\n            \"email\": \"maddie.smith.sonata@yahoo.com\",\n            \"role\": \"attendee\",\n            \"createdAt\": \"2026-08-20T09:19:04.024Z\",\n            \"updatedAt\": \"2026-08-20T09:19:04.024Z\",\n            \"__v\": 0\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhODZjNjg4MjVjNWYyOGI2YzZiM2YwZCIsInJvbGUiOiJhdHRlbmRlZSIsImlhdCI6MTc4NzMwODQ3NiwiZXhwIjoxNzg3OTEzMjc2fQ.a-GuIY4vy4bpJ7vZ2MIogFwidZJcjnyaI0igQQAGP1Y\"\n    }\n}"
+                },
+                {
+                  "name": "Login Request (admin)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"email\": \"johndoe1234@gmail.com\",\r\n    \"password\": \"sfjlkWF_255!4\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/auth/login",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "auth",
+                        "login"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "453"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"1c5-B2YzZIMGKrMlpGURl829iqfUyCk\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 21 Aug 2026 10:37:26 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"success\",\n    \"message\": \"Login Successful\",\n    \"data\": {\n        \"user\": {\n            \"_id\": \"6a86c68825c5f28b6c6b3f0c\",\n            \"name\": \"John Doe\",\n            \"email\": \"johndoe1234@gmail.com\",\n            \"role\": \"admin\",\n            \"createdAt\": \"2026-08-20T09:19:04.023Z\",\n            \"updatedAt\": \"2026-08-20T09:19:04.023Z\",\n            \"__v\": 0\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhODZjNjg4MjVjNWYyOGI2YzZiM2YwYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4NzMwODY0NiwiZXhwIjoxNzg3OTEzNDQ2fQ.aIQG4qr05nJiiZ_JfQ3itR-KG5KfCeEBXg744ndQ2Qk\"\n    }\n}"
+                },
+                {
+                  "name": "Login Request (error)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"email\": \"johndoe1234@gmail.com\",\r\n    \"password\": \"sfjlkWFsfdsf_255!4\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/auth/login",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "auth",
+                        "login"
+                      ]
+                    }
+                  },
+                  "status": "Unauthorized",
+                  "code": 401,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "213"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"d5-yGF5jBm8QZGKi62Ll82A5ObYEic\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Tue, 25 Aug 2026 11:40:14 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"fail\",\n    \"statusCode\": 401,\n    \"message\": \"Invalid credentials\",\n    \"data\": null,\n    \"stack\": \"Error: Invalid credentials\\n    at C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\controllers\\\\authController.js:32:15\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Register Account",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Luna Jismal\",\r\n    \"email\": \"luna.jsml@gmail.com\"\r\n\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base-url}}api/auth/register",
+                  "host": [
+                    "{{base-url}}api"
+                  ],
+                  "path": [
+                    "auth",
+                    "register"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Register Account (new account)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"name\": \"Luna Jismal\",\r\n    \"email\": \"luna.jsml@gmail.com\",\r\n    \"password\": \"Ispy22Glasses!\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/auth/register",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "auth",
+                        "register"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "466"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"1d2-+mcmITyrZ5S+Vc+Ycz7KeRINCtY\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Tue, 25 Aug 2026 11:51:12 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"success\",\n    \"message\": \"Registration Complete\",\n    \"data\": {\n        \"user\": {\n            \"name\": \"Luna Jismal\",\n            \"email\": \"luna.jsml@gmail.com\",\n            \"role\": \"attendee\",\n            \"_id\": \"6a8d81b0b3b5410f958a71c0\",\n            \"createdAt\": \"2026-08-25T11:51:12.454Z\",\n            \"updatedAt\": \"2026-08-25T11:51:12.454Z\",\n            \"__v\": 0\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhOGQ4MWIwYjNiNTQxMGY5NThhNzFjMCIsInJvbGUiOiJhdHRlbmRlZSIsImlhdCI6MTc4NzY1ODY3MiwiZXhwIjoxNzg4MjYzNDcyfQ.8SRbEXPI7Ucbw4Z1p6kNmTxjtPVuFn8KINVPHxfygDE\"\n    }\n}"
+                },
+                {
+                  "name": "Register Account (missing password)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"name\": \"Luna Jismal\",\r\n    \"email\": \"luna.jsml@gmail.com\"\r\n\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/auth/register",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "auth",
+                        "register"
+                      ]
+                    }
+                  },
+                  "status": "Unprocessable Entity",
+                  "code": 422,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "486"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"1e6-+V5BB783cFZ1X06GqesDuqfdOO0\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Tue, 25 Aug 2026 12:03:43 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Validation failed\",\n    \"errors\": [\n        {\n            \"field\": \"password\",\n            \"message\": \"Password is required\",\n            \"location\": \"body\"\n        },\n        {\n            \"field\": \"password\",\n            \"message\": \"Password must contain an uppercase letter\",\n            \"location\": \"body\"\n        },\n        {\n            \"field\": \"password\",\n            \"message\": \"Password must contain a number\",\n            \"location\": \"body\"\n        },\n        {\n            \"field\": \"password\",\n            \"message\": \"Password must contain a lowercase letter\",\n            \"location\": \"body\"\n        },\n        {\n            \"field\": \"password\",\n            \"message\": \"Password must be 8 characters or more\",\n            \"location\": \"body\"\n        }\n    ]\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Events",
+          "item": [
+            {
+              "name": "List Events",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{base-url}}api/events?sortBy=popular&order=desc",
+                  "host": [
+                    "{{base-url}}api"
+                  ],
+                  "path": [
+                    "events"
+                  ],
+                  "query": [
+                    {
+                      "key": "sortBy",
+                      "value": "popular"
+                    },
+                    {
+                      "key": "order",
+                      "value": "desc"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "List Events",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/events",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "2866"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"b32-5orr28b0fmeM8wR/Yo/jpAhuFYY\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 16:12:39 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"success\",\n    \"page\": 1,\n    \"limit\": 10,\n    \"totalPages\": 1,\n    \"data\": [\n        {\n            \"_id\": \"6a86c68825c5f28b6c6b3f0e\",\n            \"title\": \"Ariana Grande Concert\",\n            \"description\": \"Come see Ariana live\",\n            \"city\": \"Cairo\",\n            \"venue\": \"The Great Hall\",\n            \"capacity\": 120,\n            \"category\": {\n                \"_id\": \"6a86c68725c5f28b6c6b3f08\",\n                \"name\": \"music\",\n                \"description\": \"Come to see your favorite singers live!\",\n                \"__v\": 0,\n                \"createdAt\": \"2026-08-20T09:19:03.868Z\",\n                \"updatedAt\": \"2026-08-20T09:19:03.868Z\"\n            },\n            \"date\": \"2026-09-15T00:00:00.000Z\",\n            \"registrationCount\": 20,\n            \"__v\": 0,\n            \"createdAt\": \"2026-08-20T09:19:04.246Z\",\n            \"updatedAt\": \"2026-08-20T09:19:04.246Z\"\n        },\n        {\n            \"_id\": \"6a86c68825c5f28b6c6b3f0f\",\n            \"title\": \"Fan Gathering of World Cup\",\n            \"description\": \"Come watch World Cup matches, especially egyptian ones, in the Fanzone!\",\n            \"city\": \"Luxor\",\n            \"venue\": \"The Fanzone\",\n            \"capacity\": 400,\n            \"category\": {\n                \"_id\": \"6a86c68725c5f28b6c6b3f09\",\n                \"name\": \"sports\",\n                \"description\": \"Come to watch sports matches with an audience and enjoy an unforgettable experience!\",\n                \"__v\": 0,\n                \"createdAt\": \"2026-08-20T09:19:03.870Z\",\n                \"updatedAt\": \"2026-08-20T09:19:03.870Z\"\n            },\n            \"date\": \"2026-09-30T00:00:00.000Z\",\n            \"registrationCount\": 130,\n            \"__v\": 0,\n            \"createdAt\": \"2026-08-20T09:19:04.247Z\",\n            \"updatedAt\": \"2026-08-20T09:19:04.247Z\"\n        },\n        {\n            \"_id\": \"6a86c68825c5f28b6c6b3f11\",\n            \"title\": \"Tech Tournament\",\n            \"description\": \"Present your most recent tech achievements and connect with people like you!\",\n            \"city\": \"Alexandria\",\n            \"venue\": \"Grand Hall\",\n            \"capacity\": 210,\n            \"category\": {\n                \"_id\": \"6a86c68725c5f28b6c6b3f0b\",\n                \"name\": \"tech\",\n                \"description\": \"Come display your tech achievements and expand your network with fellow technophiles!\",\n                \"__v\": 0,\n                \"createdAt\": \"2026-08-20T09:19:03.871Z\",\n                \"updatedAt\": \"2026-08-20T09:19:03.871Z\"\n            },\n            \"date\": \"2026-10-20T00:00:00.000Z\",\n            \"registrationCount\": 200,\n            \"__v\": 0,\n            \"createdAt\": \"2026-08-20T09:19:04.247Z\",\n            \"updatedAt\": \"2026-08-20T09:19:04.247Z\"\n        },\n        {\n            \"_id\": \"6a86c68825c5f28b6c6b3f10\",\n            \"title\": \"Chess Tournament for the Girlies\",\n            \"description\": \"Chess girls can come and interact\",\n            \"city\": \"Tanta\",\n            \"venue\": \"Non Al-Sahar Library\",\n            \"capacity\": 320,\n            \"category\": {\n                \"_id\": \"6a86c68725c5f28b6c6b3f0a\",\n                \"name\": \"chess\",\n                \"description\": \"Come enjoy a fun time for chess lovers to expand their network and engage in play!\",\n                \"__v\": 0,\n                \"createdAt\": \"2026-08-20T09:19:03.870Z\",\n                \"updatedAt\": \"2026-08-20T09:19:03.870Z\"\n            },\n            \"date\": \"2026-11-10T00:00:00.000Z\",\n            \"registrationCount\": 13,\n            \"__v\": 0,\n            \"createdAt\": \"2026-08-20T09:19:04.247Z\",\n            \"updatedAt\": \"2026-08-20T09:19:04.247Z\"\n        },\n        {\n            \"_id\": \"6a8f0c4479a571c18d95f765\",\n            \"title\": \"Shakira Concert\",\n            \"description\": \"Come meet our favorite Shakira live\",\n            \"city\": \"Cairo\",\n            \"venue\": \"Cairo Statium\",\n            \"capacity\": 460,\n            \"category\": {\n                \"_id\": \"6a86c68725c5f28b6c6b3f08\",\n                \"name\": \"music\",\n                \"description\": \"Come to see your favorite singers live!\",\n                \"__v\": 0,\n                \"createdAt\": \"2026-08-20T09:19:03.868Z\",\n                \"updatedAt\": \"2026-08-20T09:19:03.868Z\"\n            },\n            \"date\": \"2026-11-30T22:00:00.000Z\",\n            \"registrationCount\": 0,\n            \"createdAt\": \"2026-08-26T15:54:44.709Z\",\n            \"updatedAt\": \"2026-08-26T15:54:44.709Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+                },
+                {
+                  "name": "List Events (category)",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/events?category=6a86c68725c5f28b6c6b3f0b",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events"
+                      ],
+                      "query": [
+                        {
+                          "key": "category",
+                          "value": "6a86c68725c5f28b6c6b3f0b",
+                          "description": "make sure that the value is a MongoDB ObjectId and not the string name for the category, as per requirements\n"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "666"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"29a-Uq36OAg2m5VSykbFfW+tU8P/DxQ\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 12:43:44 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"success\",\n    \"page\": 1,\n    \"limit\": 10,\n    \"totalPages\": 1,\n    \"data\": [\n        {\n            \"_id\": \"6a86c68825c5f28b6c6b3f11\",\n            \"title\": \"Tech Tournament\",\n            \"description\": \"Present your most recent tech achievements and connect with people like you!\",\n            \"city\": \"Alexandria\",\n            \"venue\": \"Grand Hall\",\n            \"capacity\": 210,\n            \"category\": {\n                \"_id\": \"6a86c68725c5f28b6c6b3f0b\",\n                \"name\": \"tech\",\n                \"description\": \"Come display your tech achievements and expand your network with fellow technophiles!\",\n                \"__v\": 0,\n                \"createdAt\": \"2026-08-20T09:19:03.871Z\",\n                \"updatedAt\": \"2026-08-20T09:19:03.871Z\"\n            },\n            \"date\": \"2026-10-20T00:00:00.000Z\",\n            \"registrationCount\": 200,\n            \"__v\": 0,\n            \"createdAt\": \"2026-08-20T09:19:04.247Z\",\n            \"updatedAt\": \"2026-08-20T09:19:04.247Z\"\n        }\n    ]\n}"
+                },
+                {
+                  "name": "List Events  (category error)",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/events?category=6a86c68725c5f24f4f42dc6b3f0b",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events"
+                      ],
+                      "query": [
+                        {
+                          "key": "category",
+                          "value": "6a86c68725c5f24f4f42dc6b3f0b",
+                          "description": "make sure that the value is a MongoDB ObjectId and not the string name for the category, as per requirements\n"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Unprocessable Entity",
+                  "code": 422,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "160"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"a0-C0r7xGjWgnKYrLyLFK0r1Cn1ACs\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 13:03:11 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Validation failed\",\n    \"errors\": [\n        {\n            \"field\": \"category\",\n            \"message\": \"Invalid ID\",\n            \"location\": \"query\",\n            \"value\": \"6a86c68725c5f24f4f42dc6b3f0b\"\n        }\n    ]\n}"
+                },
+                {
+                  "name": "List Events (empty, no error)",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/events?city=Alexandria&search=ariana",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events"
+                      ],
+                      "query": [
+                        {
+                          "key": "city",
+                          "value": "Alexandria",
+                          "description": "existing"
+                        },
+                        {
+                          "key": "search",
+                          "value": "ariana",
+                          "description": "existing, not in Alexandria"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "65"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"41-EMK+B16mNwyWJtob+zFlsKFoKmg\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 13:05:50 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"success\",\n    \"page\": 1,\n    \"limit\": 10,\n    \"totalPages\": 0,\n    \"data\": []\n}"
+                },
+                {
+                  "name": "List Events (city and search)",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/events?city=Cairo&search=ariana",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events"
+                      ],
+                      "query": [
+                        {
+                          "key": "city",
+                          "value": "Cairo",
+                          "description": "existing"
+                        },
+                        {
+                          "key": "search",
+                          "value": "ariana",
+                          "description": "existing, in cairo"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "569"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"239-HbkverYBkipy3vexjYeB7CK+BoY\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 13:17:22 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"success\",\n    \"page\": 1,\n    \"limit\": 10,\n    \"totalPages\": 1,\n    \"data\": [\n        {\n            \"_id\": \"6a86c68825c5f28b6c6b3f0e\",\n            \"title\": \"Ariana Grande Concert\",\n            \"description\": \"Come see Ariana live\",\n            \"city\": \"Cairo\",\n            \"venue\": \"The Great Hall\",\n            \"capacity\": 120,\n            \"category\": {\n                \"_id\": \"6a86c68725c5f28b6c6b3f08\",\n                \"name\": \"music\",\n                \"description\": \"Come to see your favorite singers live!\",\n                \"__v\": 0,\n                \"createdAt\": \"2026-08-20T09:19:03.868Z\",\n                \"updatedAt\": \"2026-08-20T09:19:03.868Z\"\n            },\n            \"date\": \"2026-09-15T00:00:00.000Z\",\n            \"registrationCount\": 20,\n            \"__v\": 0,\n            \"createdAt\": \"2026-08-20T09:19:04.246Z\",\n            \"updatedAt\": \"2026-08-20T09:19:04.246Z\"\n        }\n    ]\n}"
+                },
+                {
+                  "name": "List Events (startDate)",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/events?startDate=2026-11-10T00:00:00.000Z",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events"
+                      ],
+                      "query": [
+                        {
+                          "key": "startDate",
+                          "value": "2026-11-10T00:00:00.000Z",
+                          "description": "existing date"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "642"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"282-ScdshNEPGY7m2lUuf655ikqtYqw\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 15:38:34 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"success\",\n    \"page\": 1,\n    \"limit\": 10,\n    \"totalPages\": 1,\n    \"data\": [\n        {\n            \"_id\": \"6a86c68825c5f28b6c6b3f10\",\n            \"title\": \"Chess Tournament for the Girlies\",\n            \"description\": \"Chess girls can come and interact\",\n            \"city\": \"Tanta\",\n            \"venue\": \"Non Al-Sahar Library\",\n            \"capacity\": 320,\n            \"category\": {\n                \"_id\": \"6a86c68725c5f28b6c6b3f0a\",\n                \"name\": \"chess\",\n                \"description\": \"Come enjoy a fun time for chess lovers to expand their network and engage in play!\",\n                \"__v\": 0,\n                \"createdAt\": \"2026-08-20T09:19:03.870Z\",\n                \"updatedAt\": \"2026-08-20T09:19:03.870Z\"\n            },\n            \"date\": \"2026-11-10T00:00:00.000Z\",\n            \"registrationCount\": 13,\n            \"__v\": 0,\n            \"createdAt\": \"2026-08-20T09:19:04.247Z\",\n            \"updatedAt\": \"2026-08-20T09:19:04.247Z\"\n        }\n    ]\n}"
+                },
+                {
+                  "name": "List Events (startDate + endDate)",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/events?startDate=2026-09-30&endDate=2026-11-10",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events"
+                      ],
+                      "query": [
+                        {
+                          "key": "startDate",
+                          "value": "2026-09-30"
+                        },
+                        {
+                          "key": "endDate",
+                          "value": "2026-11-10"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "1849"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"739-EX9dppJi9fCzJ5J6nRcEZn9FC2w\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 15:59:07 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"success\",\n    \"page\": 1,\n    \"limit\": 10,\n    \"totalPages\": 1,\n    \"data\": [\n        {\n            \"_id\": \"6a86c68825c5f28b6c6b3f0f\",\n            \"title\": \"Fan Gathering of World Cup\",\n            \"description\": \"Come watch World Cup matches, especially egyptian ones, in the Fanzone!\",\n            \"city\": \"Luxor\",\n            \"venue\": \"The Fanzone\",\n            \"capacity\": 400,\n            \"category\": {\n                \"_id\": \"6a86c68725c5f28b6c6b3f09\",\n                \"name\": \"sports\",\n                \"description\": \"Come to watch sports matches with an audience and enjoy an unforgettable experience!\",\n                \"__v\": 0,\n                \"createdAt\": \"2026-08-20T09:19:03.870Z\",\n                \"updatedAt\": \"2026-08-20T09:19:03.870Z\"\n            },\n            \"date\": \"2026-09-30T00:00:00.000Z\",\n            \"registrationCount\": 130,\n            \"__v\": 0,\n            \"createdAt\": \"2026-08-20T09:19:04.247Z\",\n            \"updatedAt\": \"2026-08-20T09:19:04.247Z\"\n        },\n        {\n            \"_id\": \"6a86c68825c5f28b6c6b3f11\",\n            \"title\": \"Tech Tournament\",\n            \"description\": \"Present your most recent tech achievements and connect with people like you!\",\n            \"city\": \"Alexandria\",\n            \"venue\": \"Grand Hall\",\n            \"capacity\": 210,\n            \"category\": {\n                \"_id\": \"6a86c68725c5f28b6c6b3f0b\",\n                \"name\": \"tech\",\n                \"description\": \"Come display your tech achievements and expand your network with fellow technophiles!\",\n                \"__v\": 0,\n                \"createdAt\": \"2026-08-20T09:19:03.871Z\",\n                \"updatedAt\": \"2026-08-20T09:19:03.871Z\"\n            },\n            \"date\": \"2026-10-20T00:00:00.000Z\",\n            \"registrationCount\": 200,\n            \"__v\": 0,\n            \"createdAt\": \"2026-08-20T09:19:04.247Z\",\n            \"updatedAt\": \"2026-08-20T09:19:04.247Z\"\n        },\n        {\n            \"_id\": \"6a86c68825c5f28b6c6b3f10\",\n            \"title\": \"Chess Tournament for the Girlies\",\n            \"description\": \"Chess girls can come and interact\",\n            \"city\": \"Tanta\",\n            \"venue\": \"Non Al-Sahar Library\",\n            \"capacity\": 320,\n            \"category\": {\n                \"_id\": \"6a86c68725c5f28b6c6b3f0a\",\n                \"name\": \"chess\",\n                \"description\": \"Come enjoy a fun time for chess lovers to expand their network and engage in play!\",\n                \"__v\": 0,\n                \"createdAt\": \"2026-08-20T09:19:03.870Z\",\n                \"updatedAt\": \"2026-08-20T09:19:03.870Z\"\n            },\n            \"date\": \"2026-11-10T00:00:00.000Z\",\n            \"registrationCount\": 13,\n            \"__v\": 0,\n            \"createdAt\": \"2026-08-20T09:19:04.247Z\",\n            \"updatedAt\": \"2026-08-20T09:19:04.247Z\"\n        }\n    ]\n}"
+                },
+                {
+                  "name": "List Events (endDate error)",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/events?startDate=2026-11-10&endDate=20",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events"
+                      ],
+                      "query": [
+                        {
+                          "key": "startDate",
+                          "value": "2026-11-10"
+                        },
+                        {
+                          "key": "endDate",
+                          "value": "20"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Unprocessable Entity",
+                  "code": 422,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "137"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"89-Ci5pXI0874BV9Y5zCjnArbs8t2I\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 16:00:43 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Validation failed\",\n    \"errors\": [\n        {\n            \"field\": \"endDate\",\n            \"message\": \"Must be a date\",\n            \"location\": \"query\",\n            \"value\": \"20\"\n        }\n    ]\n}"
+                },
+                {
+                  "name": "List Events (limit error)",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/events?page=2&limit=60",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events"
+                      ],
+                      "query": [
+                        {
+                          "key": "page",
+                          "value": "2"
+                        },
+                        {
+                          "key": "limit",
+                          "value": "60"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Unprocessable Entity",
+                  "code": 422,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "160"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"a0-Vgt9bCmTxfd0/cKbQZ8LE5a6fRk\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 16:15:23 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Validation failed\",\n    \"errors\": [\n        {\n            \"field\": \"limit\",\n            \"message\": \"Limit must be a number between 1 and 50\",\n            \"location\": \"query\",\n            \"value\": \"60\"\n        }\n    ]\n}"
+                },
+                {
+                  "name": "List Events (page + limit, no error)",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/events?page=5&limit=2",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events"
+                      ],
+                      "query": [
+                        {
+                          "key": "page",
+                          "value": "5"
+                        },
+                        {
+                          "key": "limit",
+                          "value": "2"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "64"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"40-D99A3ThVj1PdgoxvT5PCkcY2PCE\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 16:16:41 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"success\",\n    \"page\": 5,\n    \"limit\": 2,\n    \"totalPages\": 3,\n    \"data\": []\n}"
+                },
+                {
+                  "name": "List Events (sortBy + order)",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/events?sortBy=registrations&order=asc",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events"
+                      ],
+                      "query": [
+                        {
+                          "key": "sortBy",
+                          "value": "registrations"
+                        },
+                        {
+                          "key": "order",
+                          "value": "asc"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "2866"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"b32-C6YGV5KqKUzk22qh7M1j8mJkRyM\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 16:18:34 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"success\",\n    \"page\": 1,\n    \"limit\": 10,\n    \"totalPages\": 1,\n    \"data\": [\n        {\n            \"_id\": \"6a8f0c4479a571c18d95f765\",\n            \"title\": \"Shakira Concert\",\n            \"description\": \"Come meet our favorite Shakira live\",\n            \"city\": \"Cairo\",\n            \"venue\": \"Cairo Statium\",\n            \"capacity\": 460,\n            \"category\": {\n                \"_id\": \"6a86c68725c5f28b6c6b3f08\",\n                \"name\": \"music\",\n                \"description\": \"Come to see your favorite singers live!\",\n                \"__v\": 0,\n                \"createdAt\": \"2026-08-20T09:19:03.868Z\",\n                \"updatedAt\": \"2026-08-20T09:19:03.868Z\"\n            },\n            \"date\": \"2026-11-30T22:00:00.000Z\",\n            \"registrationCount\": 0,\n            \"createdAt\": \"2026-08-26T15:54:44.709Z\",\n            \"updatedAt\": \"2026-08-26T15:54:44.709Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a86c68825c5f28b6c6b3f10\",\n            \"title\": \"Chess Tournament for the Girlies\",\n            \"description\": \"Chess girls can come and interact\",\n            \"city\": \"Tanta\",\n            \"venue\": \"Non Al-Sahar Library\",\n            \"capacity\": 320,\n            \"category\": {\n                \"_id\": \"6a86c68725c5f28b6c6b3f0a\",\n                \"name\": \"chess\",\n                \"description\": \"Come enjoy a fun time for chess lovers to expand their network and engage in play!\",\n                \"__v\": 0,\n                \"createdAt\": \"2026-08-20T09:19:03.870Z\",\n                \"updatedAt\": \"2026-08-20T09:19:03.870Z\"\n            },\n            \"date\": \"2026-11-10T00:00:00.000Z\",\n            \"registrationCount\": 13,\n            \"__v\": 0,\n            \"createdAt\": \"2026-08-20T09:19:04.247Z\",\n            \"updatedAt\": \"2026-08-20T09:19:04.247Z\"\n        },\n        {\n            \"_id\": \"6a86c68825c5f28b6c6b3f0e\",\n            \"title\": \"Ariana Grande Concert\",\n            \"description\": \"Come see Ariana live\",\n            \"city\": \"Cairo\",\n            \"venue\": \"The Great Hall\",\n            \"capacity\": 120,\n            \"category\": {\n                \"_id\": \"6a86c68725c5f28b6c6b3f08\",\n                \"name\": \"music\",\n                \"description\": \"Come to see your favorite singers live!\",\n                \"__v\": 0,\n                \"createdAt\": \"2026-08-20T09:19:03.868Z\",\n                \"updatedAt\": \"2026-08-20T09:19:03.868Z\"\n            },\n            \"date\": \"2026-09-15T00:00:00.000Z\",\n            \"registrationCount\": 20,\n            \"__v\": 0,\n            \"createdAt\": \"2026-08-20T09:19:04.246Z\",\n            \"updatedAt\": \"2026-08-20T09:19:04.246Z\"\n        },\n        {\n            \"_id\": \"6a86c68825c5f28b6c6b3f0f\",\n            \"title\": \"Fan Gathering of World Cup\",\n            \"description\": \"Come watch World Cup matches, especially egyptian ones, in the Fanzone!\",\n            \"city\": \"Luxor\",\n            \"venue\": \"The Fanzone\",\n            \"capacity\": 400,\n            \"category\": {\n                \"_id\": \"6a86c68725c5f28b6c6b3f09\",\n                \"name\": \"sports\",\n                \"description\": \"Come to watch sports matches with an audience and enjoy an unforgettable experience!\",\n                \"__v\": 0,\n                \"createdAt\": \"2026-08-20T09:19:03.870Z\",\n                \"updatedAt\": \"2026-08-20T09:19:03.870Z\"\n            },\n            \"date\": \"2026-09-30T00:00:00.000Z\",\n            \"registrationCount\": 130,\n            \"__v\": 0,\n            \"createdAt\": \"2026-08-20T09:19:04.247Z\",\n            \"updatedAt\": \"2026-08-20T09:19:04.247Z\"\n        },\n        {\n            \"_id\": \"6a86c68825c5f28b6c6b3f11\",\n            \"title\": \"Tech Tournament\",\n            \"description\": \"Present your most recent tech achievements and connect with people like you!\",\n            \"city\": \"Alexandria\",\n            \"venue\": \"Grand Hall\",\n            \"capacity\": 210,\n            \"category\": {\n                \"_id\": \"6a86c68725c5f28b6c6b3f0b\",\n                \"name\": \"tech\",\n                \"description\": \"Come display your tech achievements and expand your network with fellow technophiles!\",\n                \"__v\": 0,\n                \"createdAt\": \"2026-08-20T09:19:03.871Z\",\n                \"updatedAt\": \"2026-08-20T09:19:03.871Z\"\n            },\n            \"date\": \"2026-10-20T00:00:00.000Z\",\n            \"registrationCount\": 200,\n            \"__v\": 0,\n            \"createdAt\": \"2026-08-20T09:19:04.247Z\",\n            \"updatedAt\": \"2026-08-20T09:19:04.247Z\"\n        }\n    ]\n}"
+                },
+                {
+                  "name": "List Events (sortBy + order)",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/events?sortBy=date&order=desc",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events"
+                      ],
+                      "query": [
+                        {
+                          "key": "sortBy",
+                          "value": "date"
+                        },
+                        {
+                          "key": "order",
+                          "value": "desc"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "2436"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"984-Q46Z5fAYDSAtpu0CVMhzGSiuEVM\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 16:22:42 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"success\",\n    \"page\": 1,\n    \"limit\": 10,\n    \"totalPages\": 1,\n    \"data\": [\n        {\n            \"_id\": \"6a8f0c4479a571c18d95f765\",\n            \"title\": \"Shakira Concert\",\n            \"description\": \"Come meet our favorite Shakira live\",\n            \"city\": \"Cairo\",\n            \"venue\": \"Cairo Statium\",\n            \"capacity\": 460,\n            \"category\": {\n                \"_id\": \"6a86c68725c5f28b6c6b3f08\",\n                \"name\": \"music\",\n                \"description\": \"Come to see your favorite singers live!\"\n            },\n            \"date\": \"2026-11-30T22:00:00.000Z\",\n            \"registrationCount\": 0,\n            \"createdAt\": \"2026-08-26T15:54:44.709Z\",\n            \"updatedAt\": \"2026-08-26T15:54:44.709Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a86c68825c5f28b6c6b3f10\",\n            \"title\": \"Chess Tournament for the Girlies\",\n            \"description\": \"Chess girls can come and interact\",\n            \"city\": \"Tanta\",\n            \"venue\": \"Non Al-Sahar Library\",\n            \"capacity\": 320,\n            \"category\": {\n                \"_id\": \"6a86c68725c5f28b6c6b3f0a\",\n                \"name\": \"chess\",\n                \"description\": \"Come enjoy a fun time for chess lovers to expand their network and engage in play!\"\n            },\n            \"date\": \"2026-11-10T00:00:00.000Z\",\n            \"registrationCount\": 13,\n            \"__v\": 0,\n            \"createdAt\": \"2026-08-20T09:19:04.247Z\",\n            \"updatedAt\": \"2026-08-20T09:19:04.247Z\"\n        },\n        {\n            \"_id\": \"6a86c68825c5f28b6c6b3f11\",\n            \"title\": \"Tech Tournament\",\n            \"description\": \"Present your most recent tech achievements and connect with people like you!\",\n            \"city\": \"Alexandria\",\n            \"venue\": \"Grand Hall\",\n            \"capacity\": 210,\n            \"category\": {\n                \"_id\": \"6a86c68725c5f28b6c6b3f0b\",\n                \"name\": \"tech\",\n                \"description\": \"Come display your tech achievements and expand your network with fellow technophiles!\"\n            },\n            \"date\": \"2026-10-20T00:00:00.000Z\",\n            \"registrationCount\": 200,\n            \"__v\": 0,\n            \"createdAt\": \"2026-08-20T09:19:04.247Z\",\n            \"updatedAt\": \"2026-08-20T09:19:04.247Z\"\n        },\n        {\n            \"_id\": \"6a86c68825c5f28b6c6b3f0f\",\n            \"title\": \"Fan Gathering of World Cup\",\n            \"description\": \"Come watch World Cup matches, especially egyptian ones, in the Fanzone!\",\n            \"city\": \"Luxor\",\n            \"venue\": \"The Fanzone\",\n            \"capacity\": 400,\n            \"category\": {\n                \"_id\": \"6a86c68725c5f28b6c6b3f09\",\n                \"name\": \"sports\",\n                \"description\": \"Come to watch sports matches with an audience and enjoy an unforgettable experience!\"\n            },\n            \"date\": \"2026-09-30T00:00:00.000Z\",\n            \"registrationCount\": 130,\n            \"__v\": 0,\n            \"createdAt\": \"2026-08-20T09:19:04.247Z\",\n            \"updatedAt\": \"2026-08-20T09:19:04.247Z\"\n        },\n        {\n            \"_id\": \"6a86c68825c5f28b6c6b3f0e\",\n            \"title\": \"Ariana Grande Concert\",\n            \"description\": \"Come see Ariana live\",\n            \"city\": \"Cairo\",\n            \"venue\": \"The Great Hall\",\n            \"capacity\": 120,\n            \"category\": {\n                \"_id\": \"6a86c68725c5f28b6c6b3f08\",\n                \"name\": \"music\",\n                \"description\": \"Come to see your favorite singers live!\"\n            },\n            \"date\": \"2026-09-15T00:00:00.000Z\",\n            \"registrationCount\": 20,\n            \"__v\": 0,\n            \"createdAt\": \"2026-08-20T09:19:04.246Z\",\n            \"updatedAt\": \"2026-08-20T09:19:04.246Z\"\n        }\n    ]\n}"
+                },
+                {
+                  "name": "List Events (sortBy + order, error)",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/events?sortBy=popular&order=desc",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events"
+                      ],
+                      "query": [
+                        {
+                          "key": "sortBy",
+                          "value": "popular"
+                        },
+                        {
+                          "key": "order",
+                          "value": "desc"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Unprocessable Entity",
+                  "code": 422,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "180"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"b4-abTbILm2iX//i60KmLTvpT4Dr8g\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 16:26:59 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Validation failed\",\n    \"errors\": [\n        {\n            \"field\": \"sortBy\",\n            \"message\": \"sortBy must be a string, either date or registrations\",\n            \"location\": \"query\",\n            \"value\": \"popular\"\n        }\n    ]\n}"
+                }
+              ]
+            },
+            {
+              "name": "Create Event",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhODZjNjg4MjVjNWYyOGI2YzZiM2YwZCIsInJvbGUiOiJhdHRlbmRlZSIsImlhdCI6MTc4Nzc2MDIwNSwiZXhwIjoxNzg4MzY1MDA1fQ.T0eOzoJYXA1KnuX-8ab8A-sbM_DYCIb0FFVDyQpdaBo",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"title\": \"Dua Lipa Concert\",\r\n    \"description\": \"Come meet our favorite Dua Lipa live\",\r\n    \"city\": \"Alexandria\",\r\n    \"capacity\": 460,\r\n    \"category\": \"6a86c68725c5f28b6c6b3f08\",\r\n    \"date\": \"2026-12-1\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base-url}}api/events",
+                  "host": [
+                    "{{base-url}}api"
+                  ],
+                  "path": [
+                    "events"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Create Event",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"title\": \"Shakira Concert\",\r\n    \"description\": \"Come meet our favorite Shakira live\",\r\n    \"city\": \"Cairo\",\r\n    \"venue\": \"Cairo Statium\",\r\n    \"capacity\": 460,\r\n    \"category\": \"6a86c68725c5f28b6c6b3f08\",\r\n    \"date\": \"2026-12-1\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/events",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "582"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"246-3M9KU98USLVS8Qn1VsR95FTX3lo\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 15:54:45 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"success\",\n    \"message\": \"New Event Created Successfully\",\n    \"data\": {\n        \"title\": \"Shakira Concert\",\n        \"description\": \"Come meet our favorite Shakira live\",\n        \"city\": \"Cairo\",\n        \"venue\": \"Cairo Statium\",\n        \"capacity\": 460,\n        \"category\": {\n            \"_id\": \"6a86c68725c5f28b6c6b3f08\",\n            \"name\": \"music\",\n            \"description\": \"Come to see your favorite singers live!\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-08-20T09:19:03.868Z\",\n            \"updatedAt\": \"2026-08-20T09:19:03.868Z\"\n        },\n        \"date\": \"2026-11-30T22:00:00.000Z\",\n        \"registrationCount\": 0,\n        \"_id\": \"6a8f0c4479a571c18d95f765\",\n        \"createdAt\": \"2026-08-26T15:54:44.709Z\",\n        \"updatedAt\": \"2026-08-26T15:54:44.709Z\",\n        \"__v\": 0\n    }\n}"
+                },
+                {
+                  "name": "Create Event (missing venue)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"title\": \"Dua Lipa Concert\",\r\n    \"description\": \"Come meet our favorite Dua Lipa live\",\r\n    \"city\": \"Alexandria\",\r\n    \"capacity\": 460,\r\n    \"category\": \"6a86c68725c5f28b6c6b3f08\",\r\n    \"date\": \"2026-12-1\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/events",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events"
+                      ]
+                    }
+                  },
+                  "status": "Unprocessable Entity",
+                  "code": 422,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "289"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"121-2QAQr/R+FM2XefbqcCqOahgJixs\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 16:02:12 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Validation failed\",\n    \"errors\": [\n        {\n            \"field\": \"venue\",\n            \"message\": \"Venue is required\",\n            \"location\": \"body\"\n        },\n        {\n            \"field\": \"venue\",\n            \"message\": \"Venue must be a string\",\n            \"location\": \"body\"\n        },\n        {\n            \"field\": \"venue\",\n            \"message\": \"Venue name must be at least 3 characters long\",\n            \"location\": \"body\"\n        }\n    ]\n}"
+                },
+                {
+                  "name": "Create Event (invalid token)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"title\": \"Dua Lipa Concert\",\r\n    \"description\": \"Come meet our favorite Dua Lipa live\",\r\n    \"city\": \"Alexandria\",\r\n    \"capacity\": 460,\r\n    \"category\": \"6a86c68725c5f28b6c6b3f08\",\r\n    \"date\": \"2026-12-1\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/events",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events"
+                      ]
+                    }
+                  },
+                  "status": "Unauthorized",
+                  "code": 401,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "1372"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"55c-qDmRzYcP3wrVc0m30NfIiHt4pbc\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 16:02:44 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"fail\",\n    \"statusCode\": 401,\n    \"message\": \"Invalid or expired token\",\n    \"data\": null,\n    \"stack\": \"Error: Invalid or expired token\\n    at errorHandler (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\middleware\\\\errorHandler.js:28:11)\\n    at Layer.handle_error (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:71:5)\\n    at trim_prefix (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:326:13)\\n    at C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:286:9\\n    at router.process_params (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:346:12)\\n    at next (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:280:10)\\n    at Layer.handle_error (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:67:12)\\n    at trim_prefix (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:326:13)\\n    at C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:286:9\\n    at router.process_params (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:346:12)\"\n}"
+                },
+                {
+                  "name": "Create Event (forbidden token)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"title\": \"Dua Lipa Concert\",\r\n    \"description\": \"Come meet our favorite Dua Lipa live\",\r\n    \"city\": \"Alexandria\",\r\n    \"capacity\": 460,\r\n    \"category\": \"6a86c68725c5f28b6c6b3f08\",\r\n    \"date\": \"2026-12-1\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/events",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events"
+                      ]
+                    }
+                  },
+                  "status": "Forbidden",
+                  "code": 403,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "698"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"2ba-hhLRJn5hNnzP2/Vn709h8NhztjM\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 16:03:45 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"fail\",\n    \"statusCode\": 403,\n    \"message\": \"You are not allowed to perform this action\",\n    \"data\": null,\n    \"stack\": \"Error: You are not allowed to perform this action\\n    at C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\middleware\\\\requireAuth.js:25:19\\n    at Layer.handle [as handle_request] (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)\\n    at next (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:149:13)\\n    at C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\middleware\\\\requireAuth.js:18:5\\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Get Event By ID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base-url}}api/events/6a86c68725c5f28b6c6b3f0b",
+                  "host": [
+                    "{{base-url}}api"
+                  ],
+                  "path": [
+                    "events",
+                    "6a86c68725c5f28b6c6b3f0b"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Get Event By ID",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{base-url}}api/events/6a86c68825c5f28b6c6b3f11",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events",
+                        "6a86c68825c5f28b6c6b3f11"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "668"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"29c-eLw0WeoDSqfJuTdSINmCBO+HpjA\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 16:38:13 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"success\",\n    \"message\": \"Event Fetched Successfully\",\n    \"data\": {\n        \"_id\": \"6a86c68825c5f28b6c6b3f11\",\n        \"title\": \"Tech Tournament\",\n        \"description\": \"Present your most recent tech achievements and connect with people like you!\",\n        \"city\": \"Alexandria\",\n        \"venue\": \"Grand Hall\",\n        \"capacity\": 210,\n        \"category\": {\n            \"_id\": \"6a86c68725c5f28b6c6b3f0b\",\n            \"name\": \"tech\",\n            \"description\": \"Come display your tech achievements and expand your network with fellow technophiles!\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-08-20T09:19:03.871Z\",\n            \"updatedAt\": \"2026-08-20T09:19:03.871Z\"\n        },\n        \"date\": \"2026-10-20T00:00:00.000Z\",\n        \"registrationCount\": 200,\n        \"__v\": 0,\n        \"createdAt\": \"2026-08-20T09:19:04.247Z\",\n        \"updatedAt\": \"2026-08-20T09:19:04.247Z\"\n    }\n}"
+                },
+                {
+                  "name": "Get Event By ID (invalid id)",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{base-url}}api/events/6a86c68825c5f28b6c6n3f11",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events",
+                        "6a86c68825c5f28b6c6n3f11"
+                      ]
+                    }
+                  },
+                  "status": "Unprocessable Entity",
+                  "code": 422,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "162"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"a2-9sUr6jsxXHt8YaxqcmrGeUFuVec\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 16:38:48 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Validation failed\",\n    \"errors\": [\n        {\n            \"field\": \"eventID\",\n            \"message\": \"Invalid event ID\",\n            \"location\": \"params\",\n            \"value\": \"6a86c68825c5f28b6c6n3f11\"\n        }\n    ]\n}"
+                },
+                {
+                  "name": "Get Event By ID (nonexistent event)",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{base-url}}api/events/6a86c68725c5f28b6c6b3f0b",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events",
+                        "6a86c68725c5f28b6c6b3f0b"
+                      ]
+                    }
+                  },
+                  "status": "Not Found",
+                  "code": 404,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "290"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"122-9Pzd+/HI7JZv3eQOjDc9jP1JH58\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 16:39:32 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"fail\",\n    \"statusCode\": 404,\n    \"message\": \"Event Not Found\",\n    \"data\": null,\n    \"stack\": \"Error: Event Not Found\\n    at C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\controllers\\\\eventController.js:67:15\\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Update Event",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhODZjNjg4MjVjNWYyOGI2YzZiM2YwYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4NzMwODY0NiwiZXhwIjoxNzg3OTEzNDQ2fQ.aIQG4qr05nJiiZ_JfQ3itR-KG5KfEBXg744ndQ2Qk",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"title\": \"Dua Lipa Concert\",\r\n    \"description\": \"Come watch Dua Lipa perform live\",\r\n    \"capacity\":-8\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base-url}}api/events/6a8f0c4479a571c18d95f765",
+                  "host": [
+                    "{{base-url}}api"
+                  ],
+                  "path": [
+                    "events",
+                    "6a8f0c4479a571c18d95f765"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Update Event",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"title\": \"Dua Lipa Concert\",\r\n    \"description\": \"Come watch Dua Lipa perform live\",\r\n    \"capacity\":400\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/events/6a8f0c4479a571c18d95f765",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events",
+                        "6a8f0c4479a571c18d95f765"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "577"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"241-zUDN3WAB9kVuDMLNmSl9rmgjHWA\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 16:46:30 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"success\",\n    \"message\": \"Events Updated Successfully\",\n    \"data\": {\n        \"_id\": \"6a8f0c4479a571c18d95f765\",\n        \"title\": \"Dua Lipa Concert\",\n        \"description\": \"Come watch Dua Lipa perform live\",\n        \"city\": \"Cairo\",\n        \"venue\": \"Cairo Statium\",\n        \"capacity\": 400,\n        \"category\": {\n            \"_id\": \"6a86c68725c5f28b6c6b3f08\",\n            \"name\": \"music\",\n            \"description\": \"Come to see your favorite singers live!\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-08-20T09:19:03.868Z\",\n            \"updatedAt\": \"2026-08-20T09:19:03.868Z\"\n        },\n        \"date\": \"2026-11-30T22:00:00.000Z\",\n        \"registrationCount\": 0,\n        \"createdAt\": \"2026-08-26T15:54:44.709Z\",\n        \"updatedAt\": \"2026-08-26T16:46:29.950Z\",\n        \"__v\": 0\n    }\n}"
+                },
+                {
+                  "name": "Update Event (invalid value)",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"title\": \"Dua Lipa Concert\",\r\n    \"description\": \"Come watch Dua Lipa perform live\",\r\n    \"capacity\":-8\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/events/6a8f0c4479a571c18d95f765",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events",
+                        "6a8f0c4479a571c18d95f765"
+                      ]
+                    }
+                  },
+                  "status": "Unprocessable Entity",
+                  "code": 422,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "155"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"9b-NNo3AtaLF6PJKq4UrjSKiR35lgY\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 17:07:28 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Validation failed\",\n    \"errors\": [\n        {\n            \"field\": \"capacity\",\n            \"message\": \"Capacity must be a positive number\",\n            \"location\": \"body\",\n            \"value\": -8\n        }\n    ]\n}"
+                },
+                {
+                  "name": "Update Event",
+                  "originalRequest": {
+                    "method": "PATCH",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"title\": \"Dua Lipa Concert\",\r\n    \"description\": \"Come watch Dua Lipa perform live\",\r\n    \"capacity\":-8\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/events/6a8f0c4479a571c18d95f765",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events",
+                        "6a8f0c4479a571c18d95f765"
+                      ]
+                    }
+                  },
+                  "status": "Unauthorized",
+                  "code": 401,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "1372"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"55c-qDmRzYcP3wrVc0m30NfIiHt4pbc\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 17:09:08 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"fail\",\n    \"statusCode\": 401,\n    \"message\": \"Invalid or expired token\",\n    \"data\": null,\n    \"stack\": \"Error: Invalid or expired token\\n    at errorHandler (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\middleware\\\\errorHandler.js:28:11)\\n    at Layer.handle_error (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:71:5)\\n    at trim_prefix (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:326:13)\\n    at C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:286:9\\n    at router.process_params (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:346:12)\\n    at next (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:280:10)\\n    at Layer.handle_error (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:67:12)\\n    at trim_prefix (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:326:13)\\n    at C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:286:9\\n    at router.process_params (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:346:12)\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Delete Event",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhODZjNjg4MjVjNWYyOGI2YzZiM2YwYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4NzMwODY0NiwiZXhwIjoxNzg3OTEzNDQ2fQ.aIQG4qr05nJiiZ_JfQ3itR-KG5KfCeEBXg744ndQ2Qk",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{base-url}}api/events/6a8f0c4479a571c18d95f765",
+                  "host": [
+                    "{{base-url}}api"
+                  ],
+                  "path": [
+                    "events",
+                    "6a8f0c4479a571c18d95f765"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Delete Event",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/events/6a8f0c4479a571c18d95f765",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "events",
+                        "6a8f0c4479a571c18d95f765"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "71"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"47-oIW5UO2yGtXNa8APYXBSfysznlE\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 20:58:11 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"success\",\n    \"message\": \"Event Deleted Successfully\",\n    \"data\": null\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Announcements",
+          "item": [
+            {
+              "name": "Announce",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhODZjNjg4MjVjNWYyOGI2YzZiM2YwYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4NzMxMjI1NSwiZXhwIjoxNzg3OTE3MDU1fQ.xFNirlR0rVoRhnTGypuwLuI7m-ujCM8Bjc9sUZMEcfk",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"event\": \"6a86c68825c5f28b6c6b3f0f\",\r\n    \"text\": \"Event starts in half an hour. Don't be late!\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base-url}}api/announcements",
+                  "host": [
+                    "{{base-url}}api"
+                  ],
+                  "path": [
+                    "announcements"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Announce (401)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"event\": \"6a86c68825c5f28b6c6b3f0f\",\r\n    \"text\": \"Event starts in half an hour. Don't be late!\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/announcements",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "announcements"
+                      ]
+                    }
+                  },
+                  "status": "Unauthorized",
+                  "code": 401,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "1333"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"535-vpP/KZXsT8X1UpciUGmhQYU63W8\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 21 Aug 2026 10:33:19 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"fail\",\n    \"statusCode\": 401,\n    \"message\": \"No token provided\",\n    \"data\": null,\n    \"stack\": \"Error: No token provided\\n    at C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\middleware\\\\requireAuth.js:10:15\\n    at C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\utils\\\\asyncHandler.js:2:21\\n    at Layer.handle [as handle_request] (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)\\n    at next (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:149:13)\\n    at Route.dispatch (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:119:3)\\n    at Layer.handle [as handle_request] (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)\\n    at C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:284:15\\n    at router.process_params (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:346:12)\\n    at next (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:280:10)\\n    at router.handle (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:175:3)\"\n}"
+                },
+                {
+                  "name": "Announce (403)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"event\": \"6a86c68825c5f28b6c6b3f0f\",\r\n    \"text\": \"Event starts in half an hour. Don't be late!\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/announcements",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "announcements"
+                      ]
+                    }
+                  },
+                  "status": "Forbidden",
+                  "code": 403,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "698"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"2ba-hhLRJn5hNnzP2/Vn709h8NhztjM\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 21 Aug 2026 10:33:43 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"fail\",\n    \"statusCode\": 403,\n    \"message\": \"You are not allowed to perform this action\",\n    \"data\": null,\n    \"stack\": \"Error: You are not allowed to perform this action\\n    at C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\middleware\\\\requireAuth.js:25:19\\n    at Layer.handle [as handle_request] (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)\\n    at next (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:149:13)\\n    at C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\middleware\\\\requireAuth.js:18:5\\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\"\n}"
+                },
+                {
+                  "name": "Announce",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"event\": \"6a86c68825c5f28b6c6b3f0f\",\r\n    \"text\": \"Event starts in half an hour. Don't be late!\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/announcements",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "announcements"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "403"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"193-Na/cIU1QFAoEi0adbk2cUJf4QAM\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 21:04:07 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"success\",\n    \"message\": \"Announcement added successfully\",\n    \"data\": {\n        \"sender\": {\n            \"_id\": \"6a86c68825c5f28b6c6b3f0c\",\n            \"name\": \"John Doe\",\n            \"role\": \"admin\"\n        },\n        \"event\": {\n            \"_id\": \"6a86c68825c5f28b6c6b3f0f\",\n            \"title\": \"Fan Gathering of World Cup\"\n        },\n        \"text\": \"Event starts in half an hour. Don't be late!\",\n        \"_id\": \"6a8f54c6a062a60472c5d25e\",\n        \"createdAt\": \"2026-08-26T21:04:06.867Z\",\n        \"updatedAt\": \"2026-08-26T21:04:06.867Z\",\n        \"__v\": 0\n    }\n}"
+                }
+              ]
+            },
+            {
+              "name": "List Messages",
+              "request": {
+                "method": "GET",
+                "header": []
+              },
+              "response": [
+                {
+                  "name": "List Messages",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{base-url}}api/announcements/6a8f0c4479a571c18d95f765",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "announcements",
+                        "6a8f0c4479a571c18d95f765"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "390"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"186-0PMJC4a/TMSkfnaiSjXyLexUBtA\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 22:02:10 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"success\",\n    \"message\": \"Messages Fetched Successfully\",\n    \"data\": [\n        {\n            \"_id\": \"6a8f625b6e64d2268f0bac18\",\n            \"sender\": {\n                \"_id\": \"6a86c68825c5f28b6c6b3f0c\",\n                \"name\": \"John Doe\",\n                \"email\": \"johndoe1234@gmail.com\",\n                \"role\": \"admin\"\n            },\n            \"event\": \"6a8f0c4479a571c18d95f765\",\n            \"text\": \"Event starts in half an hour. Don't be late!\",\n            \"createdAt\": \"2026-08-26T22:02:03.359Z\",\n            \"updatedAt\": \"2026-08-26T22:02:03.359Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+                },
+                {
+                  "name": "List Messages (missing param)",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{base-url}}api/announcements",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "announcements"
+                      ]
+                    }
+                  },
+                  "status": "Not Found",
+                  "code": 404,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "46"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"2e-HDnue+KUfLFcpf/g2U3nvvin5TA\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 22:23:20 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"error\",\n    \"message\": \"Route not found\"\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Registrations",
+          "item": [
+            {
+              "name": "Reserve",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhODZjNjg4MjVjNWYyOGI2YzZiM2YwYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4NzMxMjI1NSwiZXhwIjoxNzg3OTE3MDU1fQ.xFNirlR0rVoRhnTGypuwLuI7m-ujCM8Bjc9sUZMEcfk",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"eventID\":\"6a86c68825c5f28b6c6b3f10\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base-url}}api/registrations",
+                  "host": [
+                    "{{base-url}}api"
+                  ],
+                  "path": [
+                    "registrations"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Reserve (nonexistent event)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"eventID\":\"6a8f0c4479a571c18d95f765\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/registrations",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "registrations"
+                      ]
+                    }
+                  },
+                  "status": "Not Found",
+                  "code": 404,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "297"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"129-HcfYapPwOWZb/vp5stL015ebaDw\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 22:50:01 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"fail\",\n    \"statusCode\": 404,\n    \"message\": \"Event Not Found\",\n    \"data\": null,\n    \"stack\": \"Error: Event Not Found\\n    at C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\controllers\\\\registrationController.js:10:23\\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\"\n}"
+                },
+                {
+                  "name": "Reserve",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"eventID\":\"6a86c68825c5f28b6c6b3f10\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/registrations",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "registrations"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "604"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"25c-da3Nmy9JKijVwTuc9h26XkUohCU\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 22:56:43 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"success\",\n    \"message\": \"Event reserved successfully\",\n    \"data\": {\n        \"attendee\": \"6a86c68825c5f28b6c6b3f0c\",\n        \"event\": {\n            \"_id\": \"6a86c68825c5f28b6c6b3f10\",\n            \"title\": \"Chess Tournament for the Girlies\",\n            \"description\": \"Chess girls can come and interact\",\n            \"city\": \"Tanta\",\n            \"venue\": \"Non Al-Sahar Library\",\n            \"capacity\": 320,\n            \"category\": \"6a86c68725c5f28b6c6b3f0a\",\n            \"date\": \"2026-11-10T00:00:00.000Z\",\n            \"registrationCount\": 14,\n            \"__v\": 0,\n            \"createdAt\": \"2026-08-20T09:19:04.247Z\",\n            \"updatedAt\": \"2026-08-26T22:56:43.172Z\"\n        },\n        \"_id\": \"6a8f6f2bb4dc0211fb7aaa84\",\n        \"createdAt\": \"2026-08-26T22:56:43.019Z\",\n        \"updatedAt\": \"2026-08-26T22:56:43.019Z\",\n        \"__v\": 0\n    }\n}"
+                },
+                {
+                  "name": "Reserve (already booked)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"eventID\":\"6a86c68825c5f28b6c6b3f10\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base-url}}api/registrations",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "registrations"
+                      ]
+                    }
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "343"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"157-YsUKn/onxeGIgycE429DlV1IEt4\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 22:58:34 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"fail\",\n    \"statusCode\": 400,\n    \"message\": \"You have already booked for this event\",\n    \"data\": null,\n    \"stack\": \"Error: You have already booked for this event\\n    at C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\controllers\\\\registrationController.js:16:31\\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Get Reserved",
+              "request": {
+                "method": "GET",
+                "header": []
+              },
+              "response": [
+                {
+                  "name": "Get Reserved (missing token)",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{base-url}}api/registrations/my",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "registrations",
+                        "my"
+                      ]
+                    }
+                  },
+                  "status": "Unauthorized",
+                  "code": 401,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "1333"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"535-vpP/KZXsT8X1UpciUGmhQYU63W8\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 23:16:07 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"fail\",\n    \"statusCode\": 401,\n    \"message\": \"No token provided\",\n    \"data\": null,\n    \"stack\": \"Error: No token provided\\n    at C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\middleware\\\\requireAuth.js:10:15\\n    at C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\utils\\\\asyncHandler.js:2:21\\n    at Layer.handle [as handle_request] (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)\\n    at next (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:149:13)\\n    at Route.dispatch (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:119:3)\\n    at Layer.handle [as handle_request] (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)\\n    at C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:284:15\\n    at router.process_params (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:346:12)\\n    at next (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:280:10)\\n    at router.handle (C:\\\\Users\\\\Dell\\\\Desktop\\\\deci lvl 4\\\\Final Project\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:175:3)\"\n}"
+                },
+                {
+                  "name": "Get Reserved",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{base-url}}api/registrations/my",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "registrations",
+                        "my"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "612"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"264-u56BQpfakmGudtnI8UB9uKjQD0g\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 23:16:34 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"success\",\n    \"message\": \"Reservations Fetched Successfully\",\n    \"data\": [\n        {\n            \"_id\": \"6a8f6f2bb4dc0211fb7aaa84\",\n            \"attendee\": \"6a86c68825c5f28b6c6b3f0c\",\n            \"event\": {\n                \"_id\": \"6a86c68825c5f28b6c6b3f10\",\n                \"title\": \"Chess Tournament for the Girlies\",\n                \"description\": \"Chess girls can come and interact\",\n                \"city\": \"Tanta\",\n                \"venue\": \"Non Al-Sahar Library\",\n                \"capacity\": 320,\n                \"category\": \"6a86c68725c5f28b6c6b3f0a\",\n                \"date\": \"2026-11-10T00:00:00.000Z\",\n                \"registrationCount\": 14,\n                \"__v\": 0,\n                \"createdAt\": \"2026-08-20T09:19:04.247Z\",\n                \"updatedAt\": \"2026-08-26T22:56:43.172Z\"\n            },\n            \"createdAt\": \"2026-08-26T22:56:43.019Z\",\n            \"updatedAt\": \"2026-08-26T22:56:43.019Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+                }
+              ]
+            },
+            {
+              "name": "Delete Reservation",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{base-url}}api/registrations/6a8f6f2bb4dc0211fb7aaa84",
+                  "host": [
+                    "{{base-url}}api"
+                  ],
+                  "path": [
+                    "registrations",
+                    "6a8f6f2bb4dc0211fb7aaa84"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Delete Reservation (invalid id)",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{base-url}}api/registrations/6a8f6f2b5b4dc0211fb7aaa84",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "registrations",
+                        "6a8f6f2b5b4dc0211fb7aaa84"
+                      ]
+                    }
+                  },
+                  "status": "Unprocessable Entity",
+                  "code": 422,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "164"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"a4-ECbts1F2nBV52XoTz7359wbIx3w\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 23:33:16 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"fail\",\n    \"message\": \"Validation failed\",\n    \"errors\": [\n        {\n            \"field\": \"id\",\n            \"message\": \"Invalid reservation ID\",\n            \"location\": \"params\",\n            \"value\": \"6a8f6f2b5b4dc0211fb7aaa84\"\n        }\n    ]\n}"
+                },
+                {
+                  "name": "Delete Reservation",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{base-url}}api/registrations/6a8f6f2bb4dc0211fb7aaa84",
+                      "host": [
+                        "{{base-url}}api"
+                      ],
+                      "path": [
+                        "registrations",
+                        "6a8f6f2bb4dc0211fb7aaa84"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Powered-By",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "Access-Control-Allow-Origin",
+                      "value": "*"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "77"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"4d-eMXRg/KctkGF2eNPoQp7BbyjFk0\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 26 Aug 2026 23:33:54 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=5"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"status\": \"success\",\n    \"message\": \"Reservation Deleted Successfully\",\n    \"data\": null\n}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
