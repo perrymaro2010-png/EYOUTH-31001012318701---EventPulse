@@ -49,7 +49,6 @@ A backend API for an event booking and real-time announcement platform — think
 ```bash
    node app.js
 ```
-   The API will be available at `http://localhost:3000` (or whichever `PORT` you configured).
 
 6. **Run tests**
 ```bash
