@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 const { asyncHandler, ok } = require("../utils/asyncHandler.js");
 const AppError = require("../utils/AppError.js");

@@ -8,6 +8,8 @@ const cors = require('cors');
 const connectDB = require('./db/connect');
 const mongoose = require('mongoose');
 
+const connectDB = require('./db/connect');
+
 const swaggerUi = require('swagger-ui-express');
 const swaggerSpec = require('./config/swagger');
 const authRoutes = require('./routes/authRoutes');
@@ -55,6 +57,8 @@ const initSocket = require('./socket');
 const server = http.createServer(app);
 const io = initSocket(server);
 app.set('io', io);
+
+connectDB();
 
 const start = async ()=> {
     try {
