@@ -62,7 +62,7 @@ const validateAllBody = [
 
     body('capacity')
         .notEmpty().withMessage('Capacity is required')
-        .isInt({min: 1}).withMessage('Capacity must be a positive number'),
+        .isInt({ min: 1 }).withMessage('Capacity must be a positive number'),
 
     body('category')
         .notEmpty().withMessage('Category is required')
@@ -178,8 +178,8 @@ const validateEventID = [
 
 const validateReservationID = [
     param('id')
-    .notEmpty().withMessage('Reservation ID is required')
-    .isMongoId().withMessage('Invalid reservation ID')
+        .notEmpty().withMessage('Reservation ID is required')
+        .isMongoId().withMessage('Invalid reservation ID')
 ]
 
 const validator = (req, res, next) => {
