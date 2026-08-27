@@ -16,7 +16,7 @@ const reserve = asyncHandler(async (req, res)=>{
     if(existentBooking) throw new AppError('You have already booked for this event', 400);
 
     const currentCount = await Registration.countDocuments({event: eventID});
-    if(currentCount >= event.capacity){
+    if(currentCount >= event.capacity || event.registrationCount >= event.capacity){
         throw new AppError('This event is full', 400);
     };
 
