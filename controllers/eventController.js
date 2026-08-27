@@ -8,7 +8,7 @@ const listEvents = asyncHandler(async (req, res)=> {
     let filter = {};
 
     if(category) filter.category = category;
-    if(city) filter.city = city;
+    if(city) filter.city = {$regex: city, $options: "i"};
     if(startDate || endDate){
         filter.date = {};
         if(startDate) 
@@ -21,13 +21,13 @@ const listEvents = asyncHandler(async (req, res)=> {
     filter.$or = [
       {
         title: {
-          $regex: req.query.search,
+          $regex: search,
           $options: "i",
         },
       },
       {
         description: {
-          $regex: req.query.search,
+          $regex: search,
           $options: "i",
         },
       },
@@ -52,7 +52,7 @@ const listEvents = asyncHandler(async (req, res)=> {
     
     
     const [events, total] = await Promise.all([
-        Event.find(filter).populate('category').sort(sort).skip(skip).limit(limitNum),
+        Event.find(filter).populate('category', '_id name description').sort(sort).skip(skip).limit(limitNum),
         Event.countDocuments(filter)
     ]);
 
