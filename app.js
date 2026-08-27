@@ -26,9 +26,6 @@ app.use('/api/events', eventRoutes);
 app.use('/api/registrations', registrationRoutes);
 app.use('/api/announcements', messageRoutes);
 
-app.use((req, res) => {
-  res.status(404).json({ status: 'error', message: 'Route not found' });
-});
 
 app.get('/health', (req, res)=>{
     const dbState = mongoose.connection.readyState;
@@ -43,6 +40,12 @@ app.get('/health', (req, res)=>{
 });
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
+app.use((req, res) => {
+  res.status(404).json({ status: 'error', message: 'Route not found' });
+});
+
+
 
 app.use(errorHandler);
 
