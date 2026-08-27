@@ -5,7 +5,7 @@ const Registration = require('../models/registrationModel');
 
 // POST - /api/registration
 const reserve = asyncHandler(async (req, res)=>{
-    const eventID = req.body.event;
+    const eventID = req.body.eventID;
     const event = await Event.findById(eventID);
     if (!event) throw new AppError('Event Not Found', 404);
 
